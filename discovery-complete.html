@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Discovery Form Received | CloudMonsta</title>
+  <meta name="description" content="Thank you for completing the CloudMonsta Client Discovery form.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#070a18">
+
+  <style>
+    :root {
+      --text:#f7f8ff;
+      --muted:#bbc1d9;
+      --purple:#8d5cff;
+      --cyan:#26d9ff;
+      --green:#5fffb0;
+      --border:rgba(255,255,255,.14);
+      --shadow:0 24px 70px rgba(0,0,0,.35);
+    }
+
+    * { box-sizing:border-box; }
+
+    body {
+      margin:0;
+      min-width:320px;
+      min-height:100vh;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 15% 10%,rgba(141,92,255,.35),transparent 32%),
+        radial-gradient(circle at 82% 5%,rgba(38,217,255,.22),transparent 28%),
+        linear-gradient(180deg,#070a18 0%,#090c1d 44%,#050712 100%);
+    }
+
+    a { color:inherit; text-decoration:none; }
+
+    .page {
+      width:min(920px,calc(100% - 32px));
+      margin:0 auto;
+      padding:56px 0;
+    }
+
+    .panel {
+      padding:clamp(30px,6vw,58px);
+      border:1px solid var(--border);
+      border-radius:34px;
+      background:
+        radial-gradient(circle at 20% 10%,rgba(141,92,255,.28),transparent 34%),
+        radial-gradient(circle at 85% 30%,rgba(38,217,255,.18),transparent 34%),
+        rgba(255,255,255,.07);
+      box-shadow:var(--shadow);
+      text-align:center;
+    }
+
+    .logo {
+      height:64px;
+      width:auto;
+      background:#fff;
+      padding:10px 18px;
+      border-radius:14px;
+      box-shadow:0 10px 24px rgba(0,0,0,.18);
+      margin-bottom:28px;
+    }
+
+    .badge {
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:9px 14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.07);
+      border-radius:999px;
+      color:#dfe7ff;
+      font-size:.88rem;
+      font-weight:800;
+      margin-bottom:22px;
+    }
+
+    .dot {
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:var(--green);
+      box-shadow:0 0 18px var(--green);
+    }
+
+    h1,h2 {
+      margin:0;
+      line-height:1.05;
+      letter-spacing:-.05em;
+    }
+
+    h1 {
+      font-size:clamp(2.8rem,7vw,5.2rem);
+    }
+
+    .lead {
+      max-width:680px;
+      margin:22px auto 0;
+      color:var(--muted);
+      font-size:1.14rem;
+      line-height:1.7;
+    }
+
+    .next-steps {
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+      margin-top:36px;
+      text-align:left;
+    }
+
+    .step {
+      padding:22px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.055);
+      border-radius:20px;
+    }
+
+    .step strong {
+      display:block;
+      margin-bottom:8px;
+      font-size:1.08rem;
+    }
+
+    .step p {
+      margin:0;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    .button {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:50px;
+      padding:0 24px;
+      margin-top:32px;
+      border-radius:999px;
+      font-weight:850;
+      background:linear-gradient(135deg,var(--purple),var(--cyan));
+      color:#fff;
+      box-shadow:0 18px 38px rgba(38,217,255,.2);
+    }
+
+    .small {
+      margin-top:28px;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    @media(max-width:700px) {
+      .next-steps { grid-template-columns:1fr; }
+    }
+
+    @media(max-width:520px) {
+      .page {
+        width:min(100% - 24px,920px);
+        padding:24px 0;
+      }
+
+      .panel {
+        padding:26px 20px;
+        border-radius:24px;
+      }
+
+      .button { width:100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="panel">
+      <img class="logo" src="logo_.png" alt="CloudMonsta">
+
+      <div class="badge"><span class="dot"></span> Discovery form received</div>
+
+      <h1>Thank you for completing your Client Discovery.</h1>
+
+      <p class="lead">
+        Your information has been sent securely to CloudMonsta. It will now be reviewed so we can understand your current environment, priorities and likely project requirements.
+      </p>
+
+      <div class="next-steps">
+        <div class="step">
+          <strong>1. We review your answers</strong>
+          <p>We’ll assess your users, email, domains, migration requirements, security and support needs.</p>
+        </div>
+
+        <div class="step">
+          <strong>2. We clarify anything unclear</strong>
+          <p>If we need more detail, we’ll contact you before preparing recommendations.</p>
+        </div>
+
+        <div class="step">
+          <strong>3. We discuss the project</strong>
+          <p>We may arrange a short consultation to confirm priorities, timescales and the right approach.</p>
+        </div>
+
+        <div class="step">
+          <strong>4. You receive a tailored proposal</strong>
+          <p>Your proposal will clearly show the recommended scope, pricing, assumptions and next steps.</p>
+        </div>
+      </div>
+
+      <p class="lead" style="font-size:1rem;">
+        Typical response time: <strong style="color:#fff;">1–2 business days</strong>.
+      </p>
+
+      <a class="button" href="index.html">Return to CloudMonsta</a>
+
+      <div class="small">
+        Need to add something? Email <strong style="color:#fff;">hello@cloudmonsta.co.uk</strong>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

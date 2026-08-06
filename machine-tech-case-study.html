@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Machine-Tech Microsoft 365 Migration Case Study | CloudMonsta</title>
+<meta content="See how CloudMonsta migrated Machine-Tech Ltd from Google Workspace to Microsoft 365, including Exchange Online, Teams, SharePoint, MFA, SPF, DKIM and DMARC." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="#070a18" name="theme-color"/>
+<style>
+    :root {
+      --bg: #070a18;
+      --bg-soft: #10152b;
+      --card: rgba(255,255,255,0.075);
+      --card-strong: rgba(255,255,255,0.11);
+      --text: #f7f8ff;
+      --muted: #bbc1d9;
+      --purple: #8d5cff;
+      --cyan: #26d9ff;
+      --green: #5fffb0;
+      --red: #ff7d93;
+      --border: rgba(255,255,255,0.14);
+      --shadow: 0 24px 70px rgba(0,0,0,0.35);
+      --radius: 28px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at 15% 5%, rgba(141,92,255,0.34), transparent 30%),
+        radial-gradient(circle at 88% 6%, rgba(38,217,255,0.20), transparent 26%),
+        linear-gradient(180deg, #070a18 0%, #090c1d 42%, #050712 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(7,10,24,0.8);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      font-size: 1.2rem;
+    }
+
+    .brand-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, var(--purple), var(--cyan));
+      display: grid;
+      place-items: center;
+      font-weight: 950;
+      box-shadow: 0 14px 34px rgba(38,217,255,0.18);
+    }
+
+    .nav-actions {
+      display:flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .text-link {
+      color: var(--muted);
+      font-weight: 750;
+      font-size: 0.94rem;
+    }
+
+    .text-link:hover { color: var(--text); }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 850;
+      background: linear-gradient(135deg, var(--purple), var(--cyan));
+      color: #fff;
+      box-shadow: 0 18px 38px rgba(38,217,255,0.2);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 24px 48px rgba(38,217,255,0.28);
+    }
+
+    .button.secondary {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid var(--border);
+      box-shadow: none;
+    }
+
+    .hero {
+      padding: clamp(56px, 9vw, 104px) 0 54px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.07);
+      color: #dfe7ff;
+      font-size: .88rem;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 18px var(--green);
+    }
+
+    h1, h2, h3 {
+      line-height: 1.06;
+      margin: 0;
+      letter-spacing: -0.05em;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 6rem);
+      max-width: 900px;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, #fff, #cdd9ff 42%, #73e9ff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy {
+      max-width: 730px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.08rem, 2vw, 1.3rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .logo-panel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 34px;
+      border: 1px solid var(--border);
+      background:
+        radial-gradient(circle at 75% 25%, rgba(38,217,255,0.25), transparent 32%),
+        radial-gradient(circle at 20% 80%, rgba(141,92,255,0.25), transparent 34%),
+        linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05));
+      box-shadow: var(--shadow);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:48px;
+    }
+
+    .client-logo{
+      width:100%;
+      max-width:520px;
+      height:auto;
+      object-fit:contain;
+      display:block;
+    }
+
+    .logo-shell.logo-shell {
+      width: min(340px, 100%);
+      aspect-ratio: 16 / 8;
+      border-radius: 24px;
+      background: #fff;
+      color: #111;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 28px;
+      box-shadow: 0 30px 70px rgba(0,0,0,0.32);
+    }
+
+    .logo-shell strong {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      letter-spacing: -0.05em;
+    }
+
+    .logo-shell small {
+      display: block;
+      margin-top: 8px;
+      color: #666;
+      font-weight: 700;
+    }
+
+    .logo-note {
+      position: absolute;
+      left: 24px;
+      bottom: 20px;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    .section {
+      padding: clamp(58px, 8vw, 90px) 0;
+    }
+
+    .section-title {
+      max-width: 850px;
+      margin-bottom: 36px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2.3rem, 4.5vw, 4.4rem);
+    }
+
+    .section-title p {
+      color: var(--muted);
+      margin: 18px 0 0;
+      font-size: 1.14rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .stat {
+      padding: 26px;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    .stat span {
+      display: block;
+      color: var(--cyan);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-size: .75rem;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 8px;
+      font-size: clamp(1.45rem, 3vw, 2.4rem);
+      letter-spacing: -0.05em;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 28px;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      min-height: 100%;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 12px 0 0;
+    }
+
+    .icon {
+      width: 54px;
+      height: 54px;
+      margin-bottom: 18px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(141,92,255,0.24), rgba(38,217,255,0.16));
+      color: var(--cyan);
+      font-size: 1.4rem;
+      font-weight: 900;
+    }
+
+    .challenge .icon {
+      color: var(--red);
+      background: rgba(255,125,147,0.10);
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 27px;
+      top: 24px;
+      bottom: 24px;
+      width: 2px;
+      background: linear-gradient(var(--purple), var(--cyan), var(--green));
+      opacity: .65;
+    }
+
+    .timeline-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .timeline-no {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: #10152b;
+      border: 1px solid var(--border);
+      color: var(--cyan);
+      font-weight: 950;
+      z-index: 2;
+    }
+
+    .timeline-body {
+      padding: 22px 24px;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    .timeline-body h3 {
+      font-size: 1.3rem;
+    }
+
+    .timeline-body p {
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    .deliverables {
+      columns: 2;
+      column-gap: 26px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .deliverables li {
+      break-inside: avoid;
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+      color: #e8ecff;
+    }
+
+    .tick {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(95,255,176,0.14);
+      color: var(--green);
+      font-weight: 950;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .tech {
+      padding: 18px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.055);
+      text-align: center;
+      font-weight: 850;
+      color: #e8ecff;
+    }
+
+    .tech span {
+      display: block;
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 86px 1fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .state {
+      padding: 30px;
+      border-radius: 26px;
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    .state.before { box-shadow: inset 0 0 0 1px rgba(255,125,147,0.05); }
+    .state.after { box-shadow: inset 0 0 0 1px rgba(95,255,176,0.06); }
+
+    .state h3 {
+      font-size: 1.8rem;
+    }
+
+    .state ul {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .state li {
+      color: var(--muted);
+    }
+
+    .before li::before {
+      content: "×";
+      color: var(--red);
+      font-weight: 950;
+      margin-right: 10px;
+    }
+
+    .after li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 950;
+      margin-right: 10px;
+    }
+
+    .arrow {
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin: 0 auto;
+      background: linear-gradient(135deg, var(--purple), var(--cyan));
+      font-size: 2rem;
+      font-weight: 950;
+      box-shadow: 0 18px 40px rgba(38,217,255,0.22);
+    }
+
+    .quote {
+      padding: clamp(32px, 6vw, 60px);
+      border-radius: 34px;
+      border: 1px solid var(--border);
+      background:
+        radial-gradient(circle at 15% 10%, rgba(141,92,255,0.28), transparent 34%),
+        radial-gradient(circle at 88% 28%, rgba(38,217,255,0.20), transparent 34%),
+        rgba(255,255,255,0.07);
+      box-shadow: var(--shadow);
+    }
+
+    .quote-mark {
+      font-size: 5rem;
+      line-height: .7;
+      color: var(--cyan);
+      opacity: .65;
+    }
+
+    .quote blockquote {
+      margin: 18px 0 0;
+      font-size: clamp(1.5rem, 3vw, 2.6rem);
+      line-height: 1.3;
+      letter-spacing: -0.04em;
+      font-weight: 800;
+    }
+
+    .quote footer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-weight: 750;
+    }
+
+    .placeholder {
+      border: 1px dashed rgba(255,255,255,0.28);
+      padding: 12px 16px;
+      border-radius: 14px;
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .cta {
+      border-radius: 34px;
+      padding: clamp(36px, 7vw, 68px);
+      border: 1px solid var(--border);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(141,92,255,0.34), transparent 32%),
+        radial-gradient(circle at 85% 30%, rgba(38,217,255,0.22), transparent 34%),
+        rgba(255,255,255,0.075);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .cta h2 {
+      font-size: clamp(2.2rem, 4.8vw, 4.4rem);
+    }
+
+    .cta p {
+      color: var(--muted);
+      margin: 16px 0 0;
+      font-size: 1.12rem;
+      max-width: 720px;
+    }
+@media (max-width: 920px) {
+      .hero-grid,
+      .grid-2,
+      .grid-3,
+      .stats,
+      .tech-grid,
+      .before-after,
+      .cta {
+        grid-template-columns: 1fr;
+      }
+
+      .logo-panel { min-height: 320px; }
+      .arrow { transform: rotate(90deg); }
+      .deliverables { columns: 1; }
+    }
+
+    @media (max-width: 580px) {
+      .container { width: min(100% - 24px, 1160px); }
+      .nav { min-height: 68px; }
+      .nav .button { display: none; }
+      .text-link { font-size: .84rem; }
+      .hero { padding-top: 42px; }
+      .hero-actions .button { width: 100%; }
+      .card, .stat, .state, .timeline-body { padding: 20px; }
+      .timeline::before { left: 22px; }
+      .timeline-item { grid-template-columns: 46px 1fr; gap: 12px; }
+      .timeline-no { width: 46px; height: 46px; border-radius: 15px; }
+      .tech-grid { grid-template-columns: repeat(2, 1fr); }
+      h1 { font-size: clamp(2.6rem, 13vw, 3.4rem); }
+    }
+  
+.site-footer {
+      margin-top: 34px;
+      border-top: 1px solid var(--border);
+      background:
+        radial-gradient(circle at 15% 0%, rgba(141,92,255,0.16), transparent 28%),
+        radial-gradient(circle at 85% 10%, rgba(38,217,255,0.12), transparent 30%),
+        rgba(4, 6, 16, 0.92);
+    }
+
+    .footer-cta {
+      padding: clamp(42px, 7vw, 72px) 0;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .footer-cta h2 {
+      font-size: clamp(2.2rem, 4.6vw, 4.4rem);
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .footer-cta p {
+      color: var(--muted);
+      max-width: 720px;
+      margin: 18px auto 28px;
+      font-size: 1.12rem;
+    }
+
+    .footer-main {
+      padding: 54px 0 34px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr repeat(3, 0.8fr);
+      gap: 34px;
+      align-items: start;
+    }
+
+    .footer-brand img {
+      height: 58px;
+      width: auto;
+      display: block;
+      background: #fff;
+      padding: 8px 14px;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      margin-bottom: 18px;
+    }
+
+    .footer-brand p {
+      color: var(--muted);
+      max-width: 360px;
+      margin: 0;
+    }
+
+    .footer-column h3 {
+      font-size: 1rem;
+      letter-spacing: 0;
+      margin-bottom: 14px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    .footer-contact {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-chip {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.055);
+      border-radius: 999px;
+      padding: 10px 14px;
+      color: #dfe7ff;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .footer-trust {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .footer-bottom {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-bottom strong {
+      color: var(--text);
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-cta .button {
+        width: 100%;
+      }
+
+      .footer-contact,
+      .footer-trust {
+        display: grid;
+      }
+
+      .contact-chip,
+      .footer-trust .pill {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+  
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(220px,280px));
+  justify-content:center;
+  text-align:center;
+  gap:48px;
+}
+.footer-brand{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 48px;
+}
+.footer-brand img{
+  margin:0 auto 18px;
+}
+.footer-links{
+  justify-items:center;
+}
+.footer-column h3{
+  text-align:center;
+}
+.footer-contact,
+.footer-trust,
+.footer-bottom{
+  justify-content:center !important;
+  text-align:center;
+}
+.footer-bottom{
+  flex-direction:column;
+  align-items:center;
+}
+@media(max-width:900px){
+ .footer-grid{
+   grid-template-columns:1fr;
+ }
+}
+
+
+
+.site-footer .footer-trust .pill {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #dce3ff !important;
+  padding: 10px 13px !important;
+  border-radius: 999px !important;
+  font-size: 0.92rem;
+  font-weight: 700;
+  width: auto;
+}
+
+</style>
+<!-- Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NNRHWJEC57"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NNRHWJEC57');
+  </script>
+</head>
+<body>
+<header>
+<div class="container nav">
+<a aria-label="CloudMonsta home" class="brand" href="index.html">
+<img alt="CloudMonsta" src="logo_.png" style="height:58px;width:auto;display:block;background:#fff;padding:8px 14px;border-radius:14px;box-shadow:0 8px 20px rgba(0,0,0,.15);"/>
+</a>
+<div class="nav-actions">
+<a class="text-link" href="index.html">Back to website</a>
+<a class="button" href="index.html#contact">Book a free call</a>
+</div>
+</div>
+</header>
+<main>
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow"><span class="dot"></span> Client success story</div>
+<h1>Machine-Tech Ltd<br/><span>Google Workspace to Microsoft 365</span></h1>
+<p class="hero-copy">
+            CloudMonsta planned and delivered a complete Microsoft 365 migration for Machine-Tech Ltd, giving the business professional email, stronger security, centralised collaboration and a modern platform for future growth.
+          </p>
+<div class="hero-actions">
+<a class="button" href="#results">View the results</a>
+<a class="button secondary" href="index.html#contact">Discuss a similar project</a>
+</div>
+</div>
+<div class="logo-panel">
+<img alt="Machine-Tech Ltd" class="client-logo" src="MachineTech-logo.png"/>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="stats">
+<div class="stat"><span>Industry</span><strong>Technology</strong></div>
+<div class="stat"><span>Users &amp; Mailboxes</span><strong>7 + 3 Shared</strong></div>
+<div class="stat"><span>Platform</span><strong>Microsoft 365</strong></div>
+<div class="stat"><span>Delivery</span><strong>Fully Managed</strong></div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-title">
+<h2>The challenge</h2>
+<p>Machine-Tech needed more than a simple mailbox move. The business required a properly designed Microsoft 365 environment that could improve communication, security, collaboration and day-to-day administration.</p>
+</div>
+<div class="grid-2">
+<div class="card challenge">
+<div class="icon">01</div>
+<h3>Moving away from Google Workspace</h3>
+<p>Existing email and business data needed to be migrated carefully without interrupting normal operations.</p>
+</div>
+<div class="card challenge">
+<div class="icon">02</div>
+<h3>Professional business email</h3>
+<p>The new setup needed reliable Exchange Online mailboxes, shared addresses and correct domain configuration.</p>
+</div>
+<div class="card challenge">
+<div class="icon">03</div>
+<h3>Better collaboration</h3>
+<p>Teams and SharePoint were required to give staff a clearer, central place for conversations and documents.</p>
+</div>
+<div class="card challenge">
+<div class="icon">04</div>
+<h3>Stronger security</h3>
+<p>Account protection, email authentication and secure administration needed to be designed into the new environment from day one.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-title">
+<h2>The CloudMonsta delivery</h2>
+<p>The project was broken into clear stages so each part could be checked before the final migration and handover.</p>
+</div>
+<div class="timeline">
+<div class="timeline-item">
+<div class="timeline-no">1</div>
+<div class="timeline-body">
+<h3>Discovery and planning</h3>
+<p>Reviewed users, shared mailboxes, domains, devices, Google Workspace data and the business requirements for Teams and SharePoint.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-no">2</div>
+<div class="timeline-body">
+<h3>Microsoft 365 foundation</h3>
+<p>Configured the Microsoft 365 tenant, users, licences, mailboxes, administrator accounts and domain records.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-no">3</div>
+<div class="timeline-body">
+<h3>Migration preparation</h3>
+<p>Created migration endpoints, validated source data, reduced DNS timing risk and completed a pilot migration before the main cutover.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-no">4</div>
+<div class="timeline-body">
+<h3>Email and data cutover</h3>
+<p>Moved mailboxes and business data into Microsoft 365, updated MX and related DNS records, and verified mail flow after go-live.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-no">5</div>
+<div class="timeline-body">
+<h3>Teams, SharePoint and security</h3>
+<p>Created the collaboration structure, enabled MFA and configured SPF, DKIM and DMARC to improve email trust and account protection.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-no">6</div>
+<div class="timeline-body">
+<h3>Handover and post-launch support</h3>
+<p>Provided documentation, user guidance, issue resolution and follow-up support after the migration completed.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-title">
+<h2>What CloudMonsta delivered</h2>
+<p>A complete Microsoft 365 implementation rather than a basic mailbox transfer.</p>
+</div>
+<div class="card">
+<ul class="deliverables">
+<li><span class="tick">✓</span><span>Microsoft 365 tenant deployment</span></li>
+<li><span class="tick">✓</span><span>Seven named user accounts</span></li>
+<li><span class="tick">✓</span><span>Shared mailboxes for key business functions</span></li>
+<li><span class="tick">✓</span><span>Google Workspace mailbox migration</span></li>
+<li><span class="tick">✓</span><span>Business data migration</span></li>
+<li><span class="tick">✓</span><span>Exchange Online configuration</span></li>
+<li><span class="tick">✓</span><span>Microsoft Teams structure</span></li>
+<li><span class="tick">✓</span><span>SharePoint document environment</span></li>
+<li><span class="tick">✓</span><span>Multi-Factor Authentication</span></li>
+<li><span class="tick">✓</span><span>SPF, DKIM and DMARC</span></li>
+<li><span class="tick">✓</span><span>DNS cutover and mail-flow validation</span></li>
+<li><span class="tick">✓</span><span>Documentation and post-migration support</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-title">
+<h2>Technology used</h2>
+<p>The final environment combined Microsoft 365 services with the client’s existing domain and source platform.</p>
+</div>
+<div class="tech-grid">
+<div class="tech"><span>☁</span>Microsoft 365</div>
+<div class="tech"><span>✉</span>Exchange Online</div>
+<div class="tech"><span>◫</span>Microsoft Teams</div>
+<div class="tech"><span>▦</span>SharePoint</div>
+<div class="tech"><span>◎</span>Entra ID</div>
+<div class="tech"><span>✓</span>Microsoft MFA</div>
+<div class="tech"><span>G</span>Google Workspace</div>
+<div class="tech"><span>DNS</span>Domain Security</div>
+</div>
+</div>
+</section>
+<section class="section" id="results">
+<div class="container">
+<div class="section-title">
+<h2>Before and after</h2>
+<p>The value of the project was not just moving data. It was replacing a fragmented setup with a properly managed business platform.</p>
+</div>
+<div class="before-after">
+<div class="state before">
+<h3>Before</h3>
+<ul>
+<li>Complex Google Workspace environment</li>
+<li>Less consistent Microsoft integration</li>
+<li>Files spread across existing cloud storage</li>
+<li>Limited central collaboration structure</li>
+<li>Email security required improvement</li>
+<li>No CloudMonsta management or support</li>
+</ul>
+</div>
+<div class="arrow">→</div>
+<div class="state after">
+<h3>After</h3>
+<ul>
+<li>Microsoft 365 business platform</li>
+<li>Exchange Online business email</li>
+<li>Teams and SharePoint collaboration</li>
+<li>MFA and secure administration</li>
+<li>SPF, DKIM and DMARC configured</li>
+<li>Documentation and ongoing support options</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container"><div class="section-title" style="text-align:center;margin-left:auto;margin-right:auto;">
+<h2>What the client said</h2>
+<p>Feedback from Machine-Tech following the successful Microsoft 365 migration and ongoing support.</p>
+</div>
+<div class="quote">
+<div class="quote-mark">“</div>
+<blockquote>"CloudMonsta made our Microsoft 365 integration completely painless for our team. Marc delivered clear, straightforward communication throughout the setup, and their ongoing IT support keeps MachineTech running without a hitch. Reliable, professional, and jargon-free—highly recommended!"</blockquote>
+<footer><strong>Ash Mills</strong><br/>Managing Director &amp; Co-Founder<br/>MachineTech Ltd</footer>
+
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-main">
+<div class="container">
+<div style="text-align:center;margin-bottom:42px">
+<img alt="CloudMonsta" src="logo_.png" style="height:64px;background:#fff;padding:10px 18px;border-radius:14px;box-shadow:0 10px 24px rgba(0,0,0,.18)"/>
+<p style="max-width:620px;margin:22px auto;color:var(--muted)">
+          Helping small businesses get more from Microsoft 365 through professional consultancy, migration, security and ongoing support.
+        </p>
+</div>
+<div class="footer-grid">
+<div class="footer-column">
+<h3>Core Services</h3>
+<div class="footer-links">
+<a href="index.html#services">Microsoft 365 Foundation</a>
+<a href="index.html#services">Email Migration</a>
+<a href="index.html#services">Teams &amp; SharePoint</a>
+<a href="index.html#services">Backup</a>
+<a href="index.html#services">Ongoing Management</a>
+<a href="index.html#services">Business Websites</a></div>
+</div>
+<div class="footer-column">
+<h3>Explore</h3>
+<div class="footer-links">
+<a href="index.html#journey-preview">How We Work</a>
+<a href="project-journey.html">From First Call to Go Live</a>
+<a href="index.html#project">Machine‑Tech Case Study</a>
+<a href="typical-investment.html">Typical Investment</a></div>
+</div>
+<div class="footer-column">
+<h3>Get in Touch</h3>
+<div class="footer-links">
+<a href="mailto:hello@cloudmonsta.co.uk">hello@cloudmonsta.co.uk</a>
+<a href="https://www.cloudmonsta.co.uk">cloudmonsta.co.uk</a>
+<span style="color:var(--muted)">Norfolk • Supporting businesses across the UK</span>
+</div>
+</div>
+</div>
+<div style="margin:40px 0;border-top:1px solid var(--border)"></div>
+<div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
+<span class="pill" style="display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.06);color:#dce3ff;padding:10px 13px;border-radius:999px;font-size:0.92rem;font-weight:700;width:auto;text-align:center;">Microsoft Certified</span>
+<span class="pill" style="display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.06);color:#dce3ff;padding:10px 13px;border-radius:999px;font-size:0.92rem;font-weight:700;width:auto;text-align:center;">20+ Years Experience</span>
+<span class="pill" style="display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.06);color:#dce3ff;padding:10px 13px;border-radius:999px;font-size:0.92rem;font-weight:700;width:auto;text-align:center;">Direct Engineer Support</span>
+<span class="pill" style="display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.06);color:#dce3ff;padding:10px 13px;border-radius:999px;font-size:0.92rem;font-weight:700;width:auto;text-align:center;">Fixed Scope Projects</span>
+<span class="pill" style="display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.06);color:#dce3ff;padding:10px 13px;border-radius:999px;font-size:0.92rem;font-weight:700;width:auto;text-align:center;">UK‑Wide Service</span>
+</div>
+<div class="footer-bottom">
+<span>© 2026 CloudMonsta. All rights reserved.</span>
+<strong>
+    Built on Microsoft 365.<br/>
+    Designed, implemented and supported by CloudMonsta.<br/>
+<span style="font-weight:500;color:var(--muted);">
+      Helping small businesses work smarter with Microsoft 365.
+    </span>
+</strong>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

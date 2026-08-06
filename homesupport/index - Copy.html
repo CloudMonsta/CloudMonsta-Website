@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CloudMonsta Home | Friendly Home Tech Support in Norfolk</title>
+  <meta name="description" content="Friendly home tech support in Norfolk for computers, laptops, Wi‑Fi, printers, phones, tablets, email, backups and smart devices." />
+  <meta name="keywords" content="home tech support Norfolk, computer help Norwich, laptop setup Norfolk, printer setup, WiFi help Norfolk, smartphone help, tablet support, home IT support" />
+  <meta name="author" content="CloudMonsta Home" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#009a9a" />
+
+<!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNRHWJEC57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NNRHWJEC57');
+
+  </script>
+
+  <style>
+    :root {
+      --navy: #071a3d;
+      --navy-2: #092653;
+      --teal: #009a9a;
+      --teal-2: #10b8aa;
+      --blue: #2468d8;
+      --purple: #5b4be7;
+      --mint: #eafdf9;
+      --pale-blue: #f2f8ff;
+      --cream: #fff8eb;
+      --text: #081a3c;
+      --muted: #4d5f77;
+      --border: rgba(8, 26, 60, 0.12);
+      --shadow: 0 22px 55px rgba(7, 26, 61, 0.12);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #ffffff;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    header {
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav {
+      min-height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 26px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--teal), var(--teal-2));
+      color: #fff;
+      box-shadow: 0 14px 30px rgba(0,154,154,0.25);
+      flex: 0 0 auto;
+    }
+
+    .brand-icon svg { width: 34px; height: 34px; }
+
+    .brand-text strong {
+      display: block;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      color: var(--navy);
+    }
+
+    .brand-text strong span { color: var(--teal); }
+
+    .brand-text small {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 8px 0;
+    }
+
+    .nav-links a.active::after,
+    .nav-links a:hover::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2px;
+      height: 3px;
+      border-radius: 99px;
+      background: var(--teal);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 58px;
+      padding: 0 26px;
+      border-radius: 10px;
+      border: 0;
+      color: #fff;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--teal), var(--teal-2));
+      box-shadow: 0 16px 34px rgba(0,154,154,0.22);
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      font-size: 1rem;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 44px rgba(0,154,154,0.28);
+    }
+
+    .button.secondary {
+      color: var(--navy);
+      background: #fff;
+      border: 1.5px solid var(--blue);
+      box-shadow: none;
+    }
+
+    .button svg { width: 22px; height: 22px; }
+
+    .hero {
+      background:
+        radial-gradient(circle at 13% 8%, rgba(0,154,154,0.10), transparent 28%),
+        radial-gradient(circle at 78% 10%, rgba(36,104,216,0.08), transparent 30%),
+        linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+      padding: 46px 0 34px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 58px;
+      align-items: center;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.05;
+      letter-spacing: -0.055em;
+      color: var(--navy);
+    }
+
+    h1 {
+      font-size: clamp(3rem, 6vw, 5.8rem);
+      max-width: 650px;
+    }
+
+    h1 span { color: var(--teal); }
+
+    .hero-copy {
+      color: var(--navy);
+      font-size: clamp(1.1rem, 2vw, 1.42rem);
+      max-width: 650px;
+      margin: 24px 0 0;
+    }
+
+    .hero-points {
+      display: grid;
+      gap: 18px;
+      margin: 34px 0 0;
+    }
+
+    .hero-point {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .circle-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, #6dd9d2, var(--teal));
+      box-shadow: 0 10px 26px rgba(0,154,154,0.18);
+    }
+
+    .circle-icon.blue { background: linear-gradient(135deg, #179bdc, var(--blue)); }
+    .circle-icon.purple { background: linear-gradient(135deg, #7462ff, var(--purple)); }
+    .circle-icon svg { width: 28px; height: 28px; }
+
+    .hero-point strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+
+    .hero-point span {
+      color: var(--text);
+    }
+
+    .hero-actions {
+      margin-top: 34px;
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image-card {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      min-height: 560px;
+      background:
+        linear-gradient(rgba(7,26,61,0.05), rgba(7,26,61,0.05)),
+        url("home-tech-hero.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-image-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,154,154,0.08), transparent 44%);
+      pointer-events: none;
+    }
+
+    .image-placeholder {
+      display: grid;
+      place-items: center;
+      height: 100%;
+      min-height: 560px;
+      text-align: center;
+      padding: 34px;
+      color: var(--navy);
+      background: linear-gradient(135deg, #eafdf9, #f2f8ff);
+    }
+
+    .image-placeholder strong {
+      font-size: 1.45rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .floating-card {
+      position: absolute;
+      left: 0;
+      bottom: 42px;
+      transform: translateX(-2%);
+      background: rgba(255,255,255,0.96);
+      border-radius: 18px;
+      padding: 22px 26px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      min-width: 380px;
+      box-shadow: 0 18px 40px rgba(7,26,61,0.15);
+    }
+
+    .floating-card .heart {
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--teal);
+      background: #f3fbff;
+      border: 1px solid rgba(36,104,216,0.2);
+    }
+
+    .floating-card strong {
+      color: var(--navy);
+      font-size: 1.3rem;
+      line-height: 1.2;
+    }
+
+    .services {
+      padding: 44px 0 30px;
+      background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 22px;
+    }
+
+    .service-item {
+      text-align: center;
+    }
+
+    .service-icon {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(36,104,216,0.22);
+      background: #fff;
+      color: var(--teal);
+      box-shadow: 0 10px 22px rgba(7,26,61,0.04);
+    }
+
+    .service-icon.blue { color: var(--blue); }
+    .service-icon.purple { color: var(--purple); }
+
+    .service-icon svg { width: 44px; height: 44px; }
+
+    .service-item strong {
+      display: block;
+      color: var(--teal);
+      font-size: 1.05rem;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .service-item:nth-child(even) strong { color: var(--blue); }
+    .service-item:nth-child(5) strong,
+    .service-item:nth-child(8) strong { color: var(--purple); }
+
+    .service-item p {
+      margin: 0;
+      color: var(--text);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .booking {
+      padding: 28px 0 38px;
+      background: #fff;
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .price-card,
+    .form-card {
+      border-radius: var(--radius);
+      padding: 34px;
+      background: linear-gradient(135deg, #eef8ff, #f9fdff);
+      box-shadow: 0 18px 46px rgba(7,26,61,0.08);
+      border: 1px solid rgba(36,104,216,0.08);
+    }
+
+    .form-card {
+      background: linear-gradient(135deg, #f5fffb, #f8fbff);
+    }
+
+    .price-card h2,
+    .form-card h2 {
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
+      margin-bottom: 14px;
+    }
+
+    .price {
+      font-size: clamp(3.6rem, 7vw, 4.8rem);
+      font-weight: 950;
+      letter-spacing: -0.08em;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .price small {
+      font-size: 1.2rem;
+      letter-spacing: 0;
+      font-weight: 800;
+    }
+
+    .price-card p,
+    .form-card p {
+      color: var(--navy);
+      font-size: 1.08rem;
+      margin: 0 0 22px;
+    }
+
+    .check-list {
+      list-style: none;
+      margin: 26px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 16px;
+    }
+
+    .check-list li {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 14px;
+      align-items: center;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+
+    .check {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #17421c;
+      background: #b7ef54;
+      font-weight: 950;
+      box-shadow: inset 0 -4px 0 rgba(0,0,0,0.08);
+    }
+
+    .price-card .button {
+      margin-top: 32px;
+      min-width: 210px;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    label {
+      display: block;
+      font-weight: 800;
+      color: var(--navy);
+      font-size: 0.92rem;
+      margin-bottom: 6px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      border: 1px solid rgba(8,26,60,0.18);
+      background: #fff;
+      color: var(--navy);
+      border-radius: 6px;
+      padding: 12px 13px;
+      font: inherit;
+      outline: none;
+    }
+
+    input::placeholder,
+    textarea::placeholder { color: #7f8ca3; }
+
+    textarea {
+      resize: vertical;
+      min-height: 96px;
+    }
+
+    .form-card .button {
+      width: 100%;
+      margin-top: 4px;
+    }
+
+    .trust-strip {
+      padding: 0 0 34px;
+      background: #fff;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      background: linear-gradient(135deg, #fffefa, #f8fbff);
+      border-radius: 18px;
+      box-shadow: 0 14px 40px rgba(7,26,61,0.06);
+      border: 1px solid rgba(8,26,60,0.06);
+      overflow: hidden;
+    }
+
+    .trust-item {
+      display: grid;
+      grid-template-columns: 68px 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 24px;
+      border-right: 1px solid rgba(8,26,60,0.12);
+    }
+
+    .trust-item:last-child { border-right: 0; }
+
+    .trust-icon {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(0,154,154,0.25);
+      color: var(--teal);
+      background: #fff;
+    }
+
+    .trust-icon.blue { color: var(--blue); }
+    .trust-icon.purple { color: var(--purple); }
+
+    .trust-icon svg { width: 34px; height: 34px; }
+
+    .trust-item strong {
+      display: block;
+      color: var(--teal);
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .trust-item:nth-child(even) strong { color: var(--blue); }
+    .trust-item p {
+      margin: 0;
+      color: var(--navy);
+      line-height: 1.35;
+    }
+
+    footer {
+      background: linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: #fff;
+      padding: 34px 0 18px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .footer-brand {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .footer-brand .brand-icon {
+      width: 56px;
+      height: 56px;
+      box-shadow: none;
+    }
+
+    .footer-brand strong {
+      display: block;
+      font-size: 1.35rem;
+    }
+
+    .footer-brand span,
+    .footer-contact span,
+    .footer-location span {
+      color: rgba(255,255,255,0.84);
+    }
+
+    .footer-contact,
+    .footer-location {
+      border-left: 1px solid rgba(255,255,255,0.25);
+      padding-left: 34px;
+    }
+
+    .footer-contact p,
+    .footer-location p {
+      margin: 6px 0;
+      font-size: 1.1rem;
+    }
+
+    .copyright {
+      text-align: center;
+      color: rgba(255,255,255,0.75);
+      margin-top: 24px;
+      font-size: 0.9rem;
+    }
+section[id] {
+  scroll-margin-top: 90px;
+}
+    @media (max-width: 1080px) {
+      .nav-links { display: none; }
+      .service-grid { grid-template-columns: repeat(4, 1fr); }
+      .hero-grid { gap: 34px; }
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid,
+      .booking-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image-card,
+      .image-placeholder {
+        min-height: 420px;
+      }
+
+      .floating-card {
+        left: 18px;
+        right: 18px;
+        transform: none;
+        min-width: 0;
+      }
+
+      .trust-grid { grid-template-columns: 1fr 1fr; }
+      .trust-item:nth-child(2) { border-right: 0; }
+      .trust-item:nth-child(1),
+      .trust-item:nth-child(2) { border-bottom: 1px solid rgba(8,26,60,0.12); }
+
+      .footer-contact,
+      .footer-location {
+        border-left: 0;
+        padding-left: 0;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container { width: min(100% - 24px, 1180px); }
+      .nav { min-height: 78px; }
+      .brand-icon { width: 46px; height: 46px; }
+      .brand-text strong { font-size: 1.25rem; }
+      .brand-text small { display: none; }
+      .nav .button { display: none; }
+
+      .hero { padding-top: 32px; }
+      h1 { font-size: clamp(2.6rem, 13vw, 3.7rem); }
+
+      .hero-actions .button,
+      .button.secondary { width: 100%; }
+
+      .service-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 16px; }
+      .service-icon { width: 76px; height: 76px; }
+      .service-icon svg { width: 38px; height: 38px; }
+
+      .form-row { grid-template-columns: 1fr; }
+      .price-card, .form-card { padding: 24px; }
+      .trust-grid { grid-template-columns: 1fr; }
+      .trust-item { border-right: 0; border-bottom: 1px solid rgba(8,26,60,0.12); }
+      .trust-item:last-child { border-bottom: 0; }
+
+      .floating-card {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        margin: -40px 16px 18px;
+      }
+    }
+@media (max-width: 620px) {
+  .floating-card {
+    display: none;
+  }
+
+  .hero-image-card {
+    min-height: 340px;
+    background-position: center top;
+  }
+}
+  </style>
+</head>
+
+<body id="top">
+  <header>
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="CloudMonsta Home">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M3 13.5L12 5l9 8.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.5 12.5V21h13v-8.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.2 21v-5.3h5.6V21" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>CloudMonsta <span>Home</span></strong>
+          <small>Friendly tech help for your home</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#top" class="active">Home</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="button" href="#contact">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 2v4M16 2v4M4 9h16M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Book a home visit
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Friendly tech help for <span>your</span> home</h1>
+          <p class="hero-copy">
+            Patient, local and jargon-free support from an experienced IT Infrastructure Engineer with over two decades of professional experience. I’ll fix your technology problems and explain everything clearly, so you can use your devices with confidence.
+          </p>
+
+          <div class="hero-points">
+            <div class="hero-point">
+              <div class="circle-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3z" stroke="currentColor" stroke-width="2"/><path d="M9.5 12l1.8 1.8L15 10" stroke="currentColor" stroke-width="2"/></svg></div>
+              <div><strong>Local & trusted</strong><span>Based in Norfolk — helping local people</span></div>
+            </div>
+            <div class="hero-point">
+              <div class="circle-icon blue"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M8.5 14.5S10 16.5 12 16.5s3.5-2 3.5-2M9 9.5h.01M15 9.5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+              <div><strong>Friendly & patient</strong><span>Plain English and a helping hand</span></div>
+            </div>
+            <div class="hero-point">
+              <div class="circle-icon purple"><svg viewBox="0 0 24 24" fill="none"><path d="M7 10V7a5 5 0 0 1 10 0v3" stroke="currentColor" stroke-width="2"/><rect x="5" y="10" width="14" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M12 14v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+              <div><strong>Reliable & secure</strong><span>Your data and privacy are important</span></div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button" href="#contact">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M8 2v4M16 2v4M4 9h16M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Book a home visit
+            </a>
+            <a class="button secondary" href="tel:07785886460">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6.4 6.4l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9z" stroke="currentColor" stroke-width="2"/></svg>
+              Call 07785 886460
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image-card">
+          
+          <div class="floating-card">
+            <div class="heart">
+              <svg viewBox="0 0 24 24" fill="none" width="38" height="38"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <strong>Helping people across<br>Norwich and Norfolk</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Services we can provide</h2>
+        </div>
+
+        <div class="service-grid">
+          <div class="service-item"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H4zM8 21h8M10 16v5M14 16v5" stroke="currentColor" stroke-width="2"/></svg></div><strong>Computer<br>Help</strong><p>Slow, freezing or not working properly.</p></div>
+          <div class="service-item"><div class="service-icon blue"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9V3h12v6M6 17H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M6 14h12v7H6z" stroke="currentColor" stroke-width="2"/></svg></div><strong>Printers &<br>Scanners</strong><p>Setup, wireless printing and troubleshooting.</p></div>
+          <div class="service-item"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M12 20h.01M2 9a14 14 0 0 1 20 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><strong>Wi‑Fi &<br>Internet</strong><p>Fix connectivity problems and improve Wi‑Fi.</p></div>
+          <div class="service-item"><div class="service-icon blue"><svg viewBox="0 0 24 24" fill="none"><path d="M3 5h18v14H3zM3 7l9 6 9-6" stroke="currentColor" stroke-width="2"/></svg></div><strong>Email &<br>Accounts</strong><p>Set up email, password help and security.</p></div>
+          <div class="service-item"><div class="service-icon purple"><svg viewBox="0 0 24 24" fill="none"><rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" stroke-width="2"/><path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><strong>Phones &<br>Tablets</strong><p>Help with Android or iPhone, apps and settings.</p></div>
+          <div class="service-item"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M7 18h10a4 4 0 0 0 .4-8A6 6 0 0 0 6 8.5 4.8 4.8 0 0 0 7 18z" stroke="currentColor" stroke-width="2"/></svg></div><strong>Backups &<br>Cloud</strong><p>Keep your photos and files safe and easy to find.</p></div>
+          <div class="service-item"><div class="service-icon blue"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3z" fill="currentColor"/><path d="M9.5 12l1.8 1.8L15 10" stroke="#fff" stroke-width="2"/></svg></div><strong>Security &<br>Updates</strong><p>Virus removal, updates and staying safe.</p></div>
+          <div class="service-item"><div class="service-icon purple"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H4zM8 21h8M12 16v5" stroke="currentColor" stroke-width="2"/></svg></div><strong>Smart TVs &<br>Devices</strong><p>Setup and help with streaming and smart devices.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking" id="pricing">
+      <div class="container booking-grid">
+        <div class="price-card">
+          <h2>Simple, fair pricing</h2>
+          <div class="price">£55 <small>call-out</small></div>
+          <p>Includes up to 1 hour of friendly home support. Additional time charged at £25 per 30 minutes.</p>
+          <ul class="check-list">
+            <li><span class="check">✓</span><span>Computer, laptop, phone and tablet help</span></li>
+            <li><span class="check">✓</span><span>Printer, Wi‑Fi and broadband troubleshooting</span></li>
+            <li><span class="check">✓</span><span>Email, passwords, backups and security checks</span></li>
+            <li><span class="check">✓</span><span>Clear explanation so you know what was fixed</span></li>
+          </ul>
+          <a class="button" href="#contact">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 2v4M16 2v4M4 9h16M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Ask about a visit
+          </a>
+        </div>
+
+        <div class="form-card" id="contact">
+          <h2>Book a home visit</h2>
+          <p>Fill in your details and I’ll get back to you to arrange a convenient time.</p>
+
+          <form action="#" method="post">
+            <div class="form-row">
+              <div>
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" placeholder="e.g. John Smith" required>
+              </div>
+              <div>
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="tel" placeholder="e.g. 07885 886460">
+              </div>
+            </div>
+
+            <div>
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" placeholder="e.g. john@example.com" required>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="postcode">Postcode</label>
+                <input id="postcode" name="postcode" type="text" placeholder="e.g. NR1 1AA">
+              </div>
+              <div>
+                <label for="day">Preferred day</label>
+                <select id="day" name="day">
+                  <option value="">Select a day</option>
+                  <option>Monday</option>
+                  <option>Tuesday</option>
+                  <option>Wednesday</option>
+                  <option>Thursday</option>
+                  <option>Friday</option>
+                  <option>Saturday</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="message">How can I help you?</label>
+              <textarea id="message" name="message" placeholder="Tell me briefly what you need help with..."></textarea>
+            </div>
+
+            <button class="button" type="submit">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              Send enquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" id="about">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2"/></svg></div><div><strong>Local service</strong><p>Based in Norfolk helping local people</p></div></div>
+          <div class="trust-item"><div class="trust-icon blue"><svg viewBox="0 0 24 24" fill="none"><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3M7 11l4-8a3 3 0 0 1 3 3v5h5a2 2 0 0 1 2 2l-1 7a2 2 0 0 1-2 2H7z" stroke="currentColor" stroke-width="2"/></svg></div><div><strong>No jargon</strong><p>Plain English every time</p></div></div>
+          <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 6.5a4 4 0 0 0-4-2H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H9a4 4 0 0 1-4-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div><strong>Honest pricing</strong><p>Clear prices with no hidden fees</p></div></div>
+          <div class="trust-item"><div class="trust-icon purple"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3z" stroke="currentColor" stroke-width="2"/><path d="M9.5 12l1.8 1.8L15 10" stroke="currentColor" stroke-width="2"/></svg></div><div><strong>Your trust matters</strong><p>Friendly, reliable and respectful service</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" style="display:none"></section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M3 13.5L12 5l9 8.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.5 12.5V21h13v-8.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div><strong>CloudMonsta Home</strong><br><span>Friendly tech help for your home</span></div>
+      </div>
+
+      <div class="footer-contact">
+        <p>☎ 07885 886460</p>
+        <p>✉ hello@cloudmonsta.co.uk</p>
+      </div>
+
+      <div class="footer-location">
+        <p>📍 Norwich, Norfolk</p>
+        <span>Covering Norwich and surrounding areas</span>
+      </div>
+    </div>
+    <div class="copyright">© 2026 CloudMonsta Home. All rights reserved.</div>
+  </footer>
+</body>
+</html>
