@@ -4,17 +4,17 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Business Websites & Appointment Websites | CloudMonsta</title>
-<meta content="CloudMonsta creates professional responsive business websites, including Azure-hosted appointment websites integrated with Microsoft Bookings, Outlook and Microsoft 365." name="description"/>
+<title>Appointment Websites | CloudMonsta</title>
+<meta content="Professional appointment websites for small businesses, hosted on Microsoft Azure and connected to Microsoft Bookings, Outlook and Microsoft 365." name="description"/>
 <meta content="small business website design, business website Norfolk, website design Norwich, Microsoft 365 website integration, responsive website design" name="keywords"/>
 <meta content="CloudMonsta" name="author"/>
 <meta content="index, follow" name="robots"/>
 <meta content="#070a18" name="theme-color"/>
-<link href="https://www.cloudmonsta.com/business-websites.html" rel="canonical"/>
-<meta content="Business Websites & Appointment Websites | CloudMonsta" property="og:title"/>
-<meta content="Professional Azure-hosted business websites, with optional Microsoft Bookings and Outlook integration for appointment-based businesses." property="og:description"/>
+<link href="https://www.cloudmonsta.com/appointment-websites.html" rel="canonical"/>
+<meta content="Appointment Websites | CloudMonsta" property="og:title"/>
+<meta content="Modern appointment websites connected to Microsoft Bookings, Outlook and Microsoft 365." property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="https://www.cloudmonsta.com/business-websites.html" property="og:url"/>
+<meta content="https://www.cloudmonsta.com/appointment-websites.html" property="og:url"/>
 <!-- Google Analytics -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NNRHWJEC57"></script>
 <script>
@@ -27,15 +27,15 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Business Website Design",
+  "name": "Appointment Websites",
   "provider": {
     "@type": "LocalBusiness",
     "name": "CloudMonsta",
     "url": "https://www.cloudmonsta.com/"
   },
   "areaServed": ["Norfolk", "United Kingdom"],
-  "serviceType": "Business website design, Azure hosting and Microsoft Bookings integration",
-  "description": "Professional responsive websites for small businesses, including Azure hosting, domain setup, SSL, contact forms, SEO foundations and optional Microsoft Bookings integration."
+  "serviceType": "Azure-hosted appointment websites with Microsoft Bookings integration",
+  "description": "Professional appointment websites for small businesses, including Azure hosting, Microsoft Bookings, Outlook calendar integration, confirmations and reminders."
 }
 </script>
 <style>
@@ -593,95 +593,162 @@
     }
   }
 
-  .website-offering-grid {
+  .booking-feature-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
   }
 
-  .website-offering {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
+  .booking-feature {
+    padding: 26px;
     border: 1px solid var(--border);
     background: var(--card);
-    border-radius: 26px;
+    border-radius: 24px;
     min-height: 100%;
   }
 
-  .website-offering.featured {
-    background:
-      radial-gradient(circle at 85% 10%, rgba(38,217,255,.18), transparent 34%),
-      radial-gradient(circle at 15% 90%, rgba(141,92,255,.16), transparent 34%),
-      rgba(255,255,255,.075);
-    border-color: rgba(38,217,255,.26);
+  .booking-feature h3 {
+    font-size: 1.3rem;
+    margin-top: 12px;
   }
 
-  .website-offering .offer-label {
-    color: var(--cyan);
-    text-transform: uppercase;
-    letter-spacing: .12em;
-    font-weight: 900;
-    font-size: .78rem;
-    margin-bottom: 14px;
-  }
-
-  .website-offering h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    margin-bottom: 14px;
-  }
-
-  .website-offering p {
+  .booking-feature p {
     color: var(--muted);
-    margin: 0;
+    margin: 10px 0 0;
   }
 
-  .website-offering ul {
-    list-style: none;
-    padding: 0;
-    margin: 24px 0;
+  .demo-strip {
     display: grid;
-    gap: 12px;
-  }
-
-  .website-offering li {
-    display: grid;
-    grid-template-columns: 24px 1fr;
-    gap: 10px;
-    color: #e8ecff;
-  }
-
-  .website-offering li span:first-child {
-    color: var(--green);
-    font-weight: 900;
-  }
-
-  .website-offering .offer-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: auto;
-    padding-top: 8px;
-  }
-
-  .demo-badge {
-    display: inline-flex;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 26px;
     align-items: center;
-    gap: 8px;
-    margin-top: 16px;
-    color: #dfe7ff;
-    font-size: .9rem;
+    padding: 36px;
+    border-radius: 30px;
+    border: 1px solid var(--border);
+    background:
+      radial-gradient(circle at 84% 18%, rgba(38,217,255,.18), transparent 34%),
+      radial-gradient(circle at 12% 82%, rgba(141,92,255,.18), transparent 34%),
+      rgba(255,255,255,.06);
+    box-shadow: var(--shadow);
+  }
+
+  .demo-strip h2 {
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+  }
+
+  .demo-strip p {
+    color: var(--muted);
+    margin: 16px 0 0;
+  }
+
+  .demo-points {
+    display: grid;
+    gap: 13px;
+  }
+
+  .demo-points span {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #e8ecff;
     font-weight: 750;
   }
 
-  .demo-badge .dot {
-    flex: 0 0 auto;
+  .demo-points b {
+    color: var(--green);
+  }
+
+  .audience-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .audience-mini {
+    padding: 24px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,.055);
+    border-radius: 22px;
+  }
+
+  .audience-mini strong {
+    display: block;
+    font-size: 1.15rem;
+  }
+
+  .audience-mini p {
+    color: var(--muted);
+    margin: 8px 0 0;
   }
 
   @media (max-width: 900px) {
-    .website-offering-grid {
+    .booking-feature-grid,
+    .demo-strip,
+    .audience-mini-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+  /* MonstaCuts live demo showcase - matched to CloudMonsta service-page styling */
+  .demo-showcase {
+    padding: 34px;
+    border-radius: 28px;
+    border: 1px solid var(--border);
+    background:
+      radial-gradient(circle at 82% 14%, rgba(38,217,255,.16), transparent 32%),
+      radial-gradient(circle at 14% 88%, rgba(141,92,255,.14), transparent 34%),
+      rgba(255,255,255,.06);
+    box-shadow: var(--shadow);
+  }
+
+  .demo-showcase-image {
+    margin-top: 26px;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: rgba(0,0,0,.16);
+  }
+
+  .demo-showcase-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+  }
+
+  .demo-showcase-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 24px;
+    align-items: start;
+    margin-top: 26px;
+  }
+
+  .demo-showcase-copy p {
+    color: var(--muted);
+    margin: 14px 0 0;
+  }
+
+  .demo-showcase-points {
+    display: grid;
+    gap: 12px;
+  }
+
+  .demo-showcase-points span {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #e8ecff;
+    font-weight: 750;
+  }
+
+  .demo-showcase-points b {
+    color: var(--green);
+  }
+
+  @media (max-width: 900px) {
+    .demo-showcase-grid {
       grid-template-columns: 1fr;
     }
   }
@@ -692,161 +759,279 @@
 <header> <div class="container nav"> <a aria-label="CloudMonsta home" class="brand" href="index.html"> <img alt="CloudMonsta" src="logo_.png" style=" height: 58px; width: auto; display: block; background: #ffffff; padding: 8px 14px; border-radius: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); "/>
 </a> <nav aria-label="Primary navigation" class="nav-links"> <a href="index.html#services">Services</a> <a href="index.html#journey-preview">How We Work</a> <a href="index.html#project">Case Study</a> <a href="#why">Why CloudMonsta</a> <a href="index.html#process">How it works</a> </nav> <a class="button" href="index.html#contact">Book free call</a> </div> </header>
 <main>
+
 <section class="service-page-hero">
 <div class="container">
-<div class="eyebrow"><span class="dot"></span> Module 6 — Business Websites</div>
-<h1>Professional websites that help your business look credible — and do more.</h1>
-<p>Whether you need a straightforward business website or a Microsoft-powered appointment website, CloudMonsta builds modern, responsive sites hosted on Azure and designed around what your customers actually need to do.</p>
+<div class="eyebrow"><span class="dot"></span> Appointment Websites</div>
+<h1>Professional websites that let customers book you online.</h1>
+<p>CloudMonsta combines a modern Azure-hosted website with Microsoft Bookings and Outlook, giving appointment-based businesses a simple way to take bookings online while reducing diary administration.</p>
 <div class="hero-actions">
-<a class="button" href="index.html#contact">Book a free consultation</a>
-<a class="button secondary" href="#included">Compare Website Options</a>
-<a class="button secondary" href="appointment-websites.html">Appointment Websites</a>
+<a class="button" href="https://agreeable-grass-0cf981c10.7.azurestaticapps.net/" target="_blank" rel="noopener">View Live MonstaCuts Demo</a>
+<a class="button secondary" href="#included">See What's Included</a>
 </div>
 </div>
 </section>
+
 <section class="section">
 <div class="container">
 <div class="problem-solution">
 <div class="problem-panel">
 <div class="launch">The common problem</div>
-<h2>First impressions can be lost before a customer ever gets in touch.</h2>
-<p>Outdated websites, free email addresses, poor mobile layouts and missing contact forms can make an otherwise good business look less established than it really is.</p>
+<h2>Customers want to book quickly without waiting for a reply.</h2>
+<p>Calls, texts and social media messages can interrupt the working day, while separate booking platforms can add another system for staff to manage.</p>
 </div>
 <div class="solution-panel">
 <div class="launch">The CloudMonsta approach</div>
-<h2>Create a professional online presence without unnecessary complexity.</h2>
-<p>CloudMonsta builds clear, fast and mobile-friendly websites that support your wider business technology, including Microsoft 365, domains, DNS and professional email.</p>
+<h2>Turn your website into part of the booking process.</h2>
+<p>Customers choose a service and available time online, receive confirmation automatically, and the appointment flows into the business Microsoft 365 calendar.</p>
 </div>
 </div>
 </div>
 </section>
+
+<section class="section">
+<div class="container">
+<div class="section-title">
+<h2>What your customers get</h2>
+<p>A straightforward booking journey designed to work well from a phone, tablet or computer.</p>
+</div>
+<div class="booking-feature-grid">
+<div class="booking-feature">
+<div class="icon">📅</div>
+<h3>24/7 online booking</h3>
+<p>Customers can book outside your opening hours without needing to call or message.</p>
+</div>
+<div class="booking-feature">
+<div class="icon">⏰</div>
+<h3>Automatic reminders</h3>
+<p>Microsoft Bookings can send confirmation and reminder emails before the appointment.</p>
+</div>
+<div class="booking-feature">
+<div class="icon">📆</div>
+<h3>Real availability</h3>
+<p>Bookings can work with staff hours and Outlook calendars to show suitable appointment times.</p>
+</div>
+<div class="booking-feature">
+<div class="icon">👥</div>
+<h3>Choose staff</h3>
+<p>Customers can choose a particular member of staff where the business wants to offer that option.</p>
+</div>
+<div class="booking-feature">
+<div class="icon">📱</div>
+<h3>Mobile-friendly</h3>
+<p>The website and booking journey are designed around how customers browse and book today.</p>
+</div>
+<div class="booking-feature">
+<div class="icon">☁</div>
+<h3>Microsoft-powered</h3>
+<p>The solution connects Azure hosting, Microsoft Bookings, Outlook and Microsoft 365.</p>
+</div>
+</div>
+</div>
+</section>
+
 <section class="section" id="included">
 <div class="container">
 <div class="section-title">
-<h2>Choose the website that fits your business</h2>
-<p>Start with a professional business website, or add Microsoft-powered online booking when appointments are part of how you work.</p>
+<h2>What's included</h2>
+<p>A complete appointment website can cover both the public-facing site and the Microsoft 365 booking workflow behind it.</p>
 </div>
-
-<div class="website-offering-grid">
-
-<div class="website-offering">
-<div class="offer-label">Standard Business Website</div>
-<h2>Professional online presence</h2>
-<p>Ideal for businesses that need a clear, credible website that explains what they do and makes it easy for customers to get in touch.</p>
-
+<div class="included-clean-grid">
+<div class="included-clean-card">
+<div class="number">01</div>
+<h3>Professional website</h3>
+<p>A modern business website built around your brand, services and customers.</p>
 <ul>
 <li><span>✓</span><span>Responsive desktop and mobile design</span></li>
-<li><span>✓</span><span>Microsoft Azure hosting</span></li>
+<li><span>✓</span><span>Microsoft Azure Static Web Apps hosting</span></li>
 <li><span>✓</span><span>Custom domain and HTTPS</span></li>
-<li><span>✓</span><span>Contact forms</span></li>
-<li><span>✓</span><span>Google Analytics</span></li>
-<li><span>✓</span><span>SEO metadata, sitemap and robots.txt</span></li>
-<li><span>✓</span><span>Microsoft 365 email and domain integration available</span></li>
-<li><span>✓</span><span>Ongoing website management available</span></li>
+<li><span>✓</span><span>Contact and business information</span></li>
 </ul>
-
-<div class="offer-actions">
-<a class="button" href="index.html#contact">Discuss a Website</a>
 </div>
-</div>
-
-<div class="website-offering featured">
-<div class="offer-label">Appointment Website</div>
-<h2>Website + online booking</h2>
-<p>Designed for appointment-based businesses that want customers to choose a service, staff member and available time directly from the website.</p>
-
+<div class="included-clean-card">
+<div class="number">02</div>
+<h3>Microsoft Bookings</h3>
+<p>Configure the booking experience around the way your business works.</p>
 <ul>
-<li><span>✓</span><span>Everything in the Standard Business Website</span></li>
-<li><span>✓</span><span>Microsoft Bookings setup and branding</span></li>
-<li><span>✓</span><span>Services, durations and pricing configured</span></li>
-<li><span>✓</span><span>Staff working hours and availability</span></li>
-<li><span>✓</span><span>Outlook calendar integration</span></li>
-<li><span>✓</span><span>Automatic booking confirmations</span></li>
-<li><span>✓</span><span>Customer reminder emails</span></li>
-<li><span>✓</span><span>Live booking demo available</span></li>
+<li><span>✓</span><span>Branded Microsoft Bookings page</span></li>
+<li><span>✓</span><span>Services, durations and pricing</span></li>
+<li><span>✓</span><span>Staff and availability</span></li>
+<li><span>✓</span><span>Booking rules and lead times</span></li>
 </ul>
+</div>
+<div class="included-clean-card">
+<div class="number">03</div>
+<h3>Customer notifications</h3>
+<p>Give customers clear information before and after they book.</p>
+<ul>
+<li><span>✓</span><span>Booking confirmation emails</span></li>
+<li><span>✓</span><span>Appointment reminders</span></li>
+<li><span>✓</span><span>Cancellation and rescheduling options</span></li>
+<li><span>✓</span><span>Calendar invitations where appropriate</span></li>
+</ul>
+</div>
+<div class="included-clean-card">
+<div class="number">04</div>
+<h3>Launch and management</h3>
+<p>Get the solution online properly and keep the option of ongoing support.</p>
+<ul>
+<li><span>✓</span><span>GitHub version control</span></li>
+<li><span>✓</span><span>Automated Azure deployment</span></li>
+<li><span>✓</span><span>Basic technical SEO</span></li>
+<li><span>✓</span><span>Ongoing management available</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
 
-<div class="demo-badge"><span class="dot"></span> Live MonstaCuts demonstration available</div>
 
-<div class="offer-actions">
-<a class="button" href="appointment-websites.html">Appointment Websites</a>
-<a class="button secondary" href="https://agreeable-grass-0cf981c10.7.azurestaticapps.net/" target="_blank" rel="noopener">View Live Demo</a>
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<div class="eyebrow"><span class="dot"></span> See it in action</div>
+<h2>A real appointment website built by CloudMonsta.</h2>
+<p>MonstaCuts is a fictional barbershop created to demonstrate the quality, functionality and booking experience available with a CloudMonsta Appointment Website.</p>
+</div>
+
+<div class="demo-showcase">
+
+<div class="launch">Live MonstaCuts demonstration</div>
+<h2 style="font-size:clamp(2rem,4vw,3.4rem);margin-top:12px;">See the full customer journey before you invest.</h2>
+
+<div class="demo-showcase-image">
+<img src="images/monstacuts-demo.png" alt="MonstaCuts appointment website demo showing the homepage and online booking call to action"/>
+</div>
+
+<div class="demo-showcase-grid">
+
+<div class="demo-showcase-copy">
+<h3 style="font-size:1.55rem;">More than a visual mock-up.</h3>
+<p>The demo is a working Azure-hosted website connected to Microsoft Bookings. Visitors can browse the site, open the live booking experience and see how a customer moves from website visit to confirmed appointment.</p>
+
+<div class="hero-actions">
+<a class="button" href="https://agreeable-grass-0cf981c10.7.azurestaticapps.net/" target="_blank" rel="noopener">View Live MonstaCuts Demo</a>
+<a class="button secondary" href="business-websites.html">Back to Business Websites</a>
 </div>
 </div>
 
+<div class="demo-showcase-points">
+<span><b>✓</b> Responsive Azure-hosted website</span>
+<span><b>✓</b> Microsoft Bookings integration</span>
+<span><b>✓</b> Services and staff selection</span>
+<span><b>✓</b> Outlook calendar integration</span>
+<span><b>✓</b> Booking confirmation emails</span>
+<span><b>✓</b> Automatic reminder emails</span>
+<span><b>✓</b> Mobile-friendly customer journey</span>
 </div>
+
+</div>
+</div>
+
 </div>
 </section>
 
 <section class="section">
 <div class="container">
 <div class="section-title">
-<h2>Perfect for</h2>
-<p>This service is aimed at businesses that need a professional website without an oversized agency project.</p>
-</div>
-<div class="audience-grid">
-<div class="audience-card"><h3>New businesses</h3><p>Launch with a professional domain, website and business email from the start.</p></div>
-<div class="audience-card"><h3>Consultants</h3><p>Build credibility and make it easy for potential clients to understand your services.</p></div>
-<div class="audience-card"><h3>Trades and service businesses</h3><p>Present your work clearly and give customers a straightforward way to enquire.</p></div>
-<div class="audience-card"><h3>Engineering and technical firms</h3><p>Create a clean, credible site that reflects the quality of the business behind it.</p></div>
-<div class="audience-card"><h3>Professional services</h3><p>Give customers confidence with a structured, trustworthy online presence.</p></div>
-<div class="audience-card"><h3>Businesses with outdated websites</h3><p>Replace an old or difficult-to-use site with something modern and mobile friendly.</p></div>
-</div>
-</div>
-</section>
-<section class="section">
-<div class="container">
-<div class="section-title">
-<h2>What a better website gives your business</h2>
-<p>The value is not simply having a website. It is helping potential customers understand and trust your business.</p>
-</div>
-<div class="website-benefits">
-<div class="website-benefit"><strong>Better first impressions</strong><p>Look more established and professional.</p></div>
-<div class="website-benefit"><strong>Easier enquiries</strong><p>Give customers a clear way to get in touch.</p></div>
-<div class="website-benefit"><strong>Mobile compatibility</strong><p>Work properly across phones, tablets and desktops.</p></div>
-<div class="website-benefit"><strong>Joined-up technology</strong><p>Connect website, domain, DNS and Microsoft 365 services.</p></div>
-</div>
-</div>
-</section>
-<section class="section">
-<div class="container">
-<div class="section-title">
-<h2>How the website project works</h2>
-<p>A simple process keeps the project clear and avoids unnecessary delays.</p>
+<h2>How it works</h2>
+<p>A joined-up customer journey from website visit to confirmed appointment.</p>
 </div>
 <div class="website-process">
 <div class="website-step">
 <div class="number">01</div>
-<h3>Discovery</h3>
-<p>Discuss your business, services, audience, branding and what the website needs to achieve.</p>
+<h3>Visit the website</h3>
+<p>The customer views services, prices, team information and opening hours.</p>
 </div>
 <div class="website-step">
 <div class="number">02</div>
-<h3>Content and structure</h3>
-<p>Agree the pages, wording, navigation and information required for the site.</p>
+<h3>Choose Book Appointment</h3>
+<p>They enter the Microsoft Bookings journey from the website.</p>
 </div>
 <div class="website-step">
 <div class="number">03</div>
-<h3>Build and review</h3>
-<p>Create the site, review the design and make agreed refinements before launch.</p>
+<h3>Select a time</h3>
+<p>Bookings presents suitable availability based on the configured schedule.</p>
 </div>
 <div class="website-step">
 <div class="number">04</div>
-<h3>Launch</h3>
-<p>Connect the domain, deploy the website and complete final checks.</p>
+<h3>Confirmation</h3>
+<p>The customer receives confirmation while the booking is added to the business calendar.</p>
 </div>
 </div>
 </div>
 </section>
-<section class="section websites-addon-reference" id="addons">
+
+<section class="section">
+<div class="container">
+<div class="demo-strip">
+<div>
+<div class="launch">Live demonstration</div>
+<h2>Try MonstaCuts for yourself.</h2>
+<p>MonstaCuts is a fictional barber business built by CloudMonsta to demonstrate the complete journey: Azure-hosted website, live Microsoft Bookings page, customer confirmations and Outlook integration.</p>
+<div class="hero-actions">
+<a class="button" href="https://agreeable-grass-0cf981c10.7.azurestaticapps.net/" target="_blank" rel="noopener">Open Live Demo</a>
+<a class="button secondary" href="business-websites.html">Back to Business Websites</a>
+</div>
+</div>
+<div class="demo-points">
+<span><b>✓</b> Azure Static Web Apps</span>
+<span><b>✓</b> Responsive website</span>
+<span><b>✓</b> Microsoft Bookings</span>
+<span><b>✓</b> Outlook calendar</span>
+<span><b>✓</b> Confirmation emails</span>
+<span><b>✓</b> Reminder emails</span>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
 <div class="container">
 <div class="section-title">
-<h2>Related modules</h2>
-<p>Build the wider solution around what your business actually needs.</p>
+<h2>Ideal for appointment-based businesses</h2>
+<p>The same approach can be adapted to many businesses where customers need to choose a service, staff member, date or time.</p>
 </div>
-<div class="addon-grid"><div class="addon-card"><div class="launch">Module 1</div><div class="icon">☁</div><h3>Microsoft 365 Foundation</h3><p>The essential starting point for a new tenant or an existing setup that needs to be configured properly.</p><span class="addon-tag">Best for a secure starting point</span><div class="module-link"><a class="button secondary" href="microsoft-365-foundation.html">Learn More</a></div></div><div class="addon-card"><div class="launch">Module 2</div><div class="icon">✉</div><h3>Email Migration</h3><p>For businesses moving from Google Workspace, old email hosting or another Microsoft 365 tenant.</p><span class="addon-tag">Best for platform migrations</span><div class="module-link"><a class="button secondary" href="email-migration.html">Learn More</a></div></div><div class="addon-card"><div class="launch">Module 3</div><div class="icon">📁</div><h3>Teams &amp; SharePoint</h3><p>A structured collaboration and document environment for your staff.</p><span class="addon-tag">Best for collaboration</span><div class="module-link"><a class="button secondary" href="teams-sharepoint.html">Learn More</a></div></div><div class="addon-card"><div class="launch">Module 4</div><div class="icon">💾</div><h3>Microsoft 365 Backup</h3><p>Independent protection for Microsoft 365 data with practical recovery options.</p><span class="addon-tag">Best for data protection</span><div class="module-link"><a class="button secondary" href="microsoft-365-backup.html">Learn More</a></div></div><div class="addon-card"><div class="launch">Module 5</div><div class="icon">⚙</div><h3>Ongoing Management</h3><p>Monthly Microsoft 365 administration, maintenance and remote support.</p><span class="addon-tag">Best for ongoing support</span><div class="module-link"><a class="button secondary" href="ongoing-management.html">Learn More</a></div></div></div>
+<div class="audience-mini-grid">
+<div class="audience-mini"><strong>💈 Barbers &amp; salons</strong><p>Cuts, fades, styling, beauty and grooming appointments.</p></div>
+<div class="audience-mini"><strong>🏋 Personal trainers</strong><p>Consultations, reviews and one-to-one training sessions.</p></div>
+<div class="audience-mini"><strong>🐶 Dog groomers</strong><p>Make it easier for customers to choose services and available times.</p></div>
+<div class="audience-mini"><strong>📷 Photographers</strong><p>Consultations, studio sessions and project appointments.</p></div>
+<div class="audience-mini"><strong>🧰 Trades</strong><p>Surveys, quotations, consultations and scheduled site visits.</p></div>
+<div class="audience-mini"><strong>💼 Professional services</strong><p>Customer consultations and appointment-led services.</p></div>
+</div>
 </div>
 </section>
+
+<section class="section">
+<div class="container brief-proof">
+<div class="card">
+<div class="launch">Why CloudMonsta</div>
+<h2 style="font-size:2.4rem;margin-top:12px;">More than just web design.</h2>
+<p>CloudMonsta can manage the website, Azure hosting and the Microsoft 365 services behind the booking workflow, providing one joined-up solution instead of several disconnected suppliers.</p>
+</div>
+<div class="grid-2">
+<div class="card">
+<strong>Direct engineer access</strong>
+<p>You deal directly with the person designing and delivering the solution.</p>
+</div>
+<div class="card">
+<strong>Microsoft 365 expertise</strong>
+<p>The booking workflow is configured with the wider Microsoft environment in mind.</p>
+</div>
+<div class="card">
+<strong>Modern cloud hosting</strong>
+<p>Sites use Azure and GitHub rather than traditional manual FTP deployment.</p>
+</div>
+<div class="card">
+<strong>Room to grow</strong>
+<p>Microsoft 365, Teams, SharePoint, security and automation can be added later.</p>
+</div>
+</div>
+</div>
+</section>
+
 <section class="section" id="faq">
 <div class="container">
 <div class="section-title">
@@ -854,60 +1039,54 @@
 </div>
 <div class="faq">
 <details open="">
-<summary>How long does a website take?</summary>
-<p>Timescales depend on the number of pages, content readiness and the amount of design work required. A clear scope and agreed content help keep delivery moving.</p>
+<summary>What Microsoft 365 licence do I need?</summary>
+<p>The right licence depends on the business setup. Microsoft Bookings is available with several Microsoft 365 business plans, and CloudMonsta can help recommend the appropriate option.</p>
 </details>
 <details>
-<summary>Can I update the website myself?</summary>
-<p>That depends on the final platform and setup. CloudMonsta can discuss options for straightforward future updates during the project.</p>
+<summary>Can customers receive reminder emails?</summary>
+<p>Yes. Microsoft Bookings can send automatic confirmation and reminder emails before appointments.</p>
 </details>
 <details>
-<summary>Do you provide hosting?</summary>
-<p>CloudMonsta can advise on suitable hosting and deployment options and can discuss ongoing website support where required.</p>
+<summary>Can several members of staff use it?</summary>
+<p>Yes. Multiple staff members can be configured with their own services, working hours and availability.</p>
 </details>
 <details>
-<summary>Can you register or connect my domain?</summary>
-<p>Yes. Domain registration, DNS and website connection can be included where scoped.</p>
+<summary>Will appointments appear in Outlook?</summary>
+<p>Yes. Bookings integrates with Microsoft 365 calendars so appointments can appear directly in the relevant staff calendar.</p>
 </details>
 <details>
-<summary>Will the website work on mobile devices?</summary>
-<p>Yes. Responsive design is included so the website works across modern phones, tablets and desktop devices.</p>
+<summary>Can customers book from their phone?</summary>
+<p>Yes. The website and Microsoft Bookings experience are designed to work on modern phones, tablets and desktop devices.</p>
 </details>
 <details>
-<summary>Can you redesign my current website?</summary>
-<p>Yes. Existing content and branding can be reviewed and used as the basis for a cleaner, more modern replacement.</p>
-</details>
-<details>
-<summary>Can you connect Microsoft 365 business email?</summary>
-<p>Yes. CloudMonsta can help connect your domain to Microsoft 365 and configure professional business email as a related module.</p>
-</details>
-
-<details>
-<summary>Can customers book appointments through the website?</summary>
-<p>Yes. CloudMonsta can build an Appointment Website connected to Microsoft Bookings and Outlook so customers can choose a service, staff member and available time online. <a href="appointment-websites.html" style="color:var(--cyan);font-weight:800;">See the Appointment Websites service →</a></p>
+<summary>Can CloudMonsta manage everything after launch?</summary>
+<p>Yes. Website hosting, updates and Microsoft 365 management can be provided as an ongoing managed service where required.</p>
 </details>
 </div>
 </div>
 </section>
+
 <section class="section">
 <div class="container">
 <div class="cta-panel" style="grid-template-columns:1fr auto;">
 <div>
-<div class="eyebrow"><span class="dot"></span> Typical Investment</div>
-<h2 style="font-size:clamp(2rem,4vw,3.2rem);">Need an idea of the investment?</h2>
-<p>Every business is different, but our Typical Investment Guide provides indicative pricing for our most common projects and ongoing services before you get in touch.</p>
+<div class="eyebrow"><span class="dot"></span> Live Demo</div>
+<h2 style="font-size:clamp(2rem,4vw,3.2rem);">Want to see the booking journey working?</h2>
+<p>Open MonstaCuts and try the same experience a potential customer would use.</p>
 </div>
 <div>
-<a class="button secondary" href="typical-investment.html">View Typical Investment Guide</a>
+<a class="button secondary" href="https://agreeable-grass-0cf981c10.7.azurestaticapps.net/" target="_blank" rel="noopener">View MonstaCuts Demo</a>
 </div>
 </div>
 </div>
-</section><section class="section">
+</section>
+
+<section class="section">
 <div class="container">
 <div class="cta-panel">
 <div>
-<h2>Ready to give your business a professional online presence?</h2>
-<p>Start with a free consultation to discuss your business, content, domain, branding and what the website needs to achieve.</p>
+<h2>Ready to let customers book directly from your website?</h2>
+<p>Start with a free consultation and we’ll look at how your business currently handles appointments and what the right solution could look like.</p>
 </div>
 <div>
 <a class="button" href="index.html#contact">Book a Free Consultation</a>
@@ -915,6 +1094,7 @@
 </div>
 </div>
 </section>
+
 </main>
 <footer class="site-footer">  <div class="footer-main"> <div class="container"> <div style="text-align:center;margin-bottom:42px"> <img alt="CloudMonsta" src="logo_.png" style="height:64px;background:#fff;padding:10px 18px;border-radius:14px;box-shadow:0 10px 24px rgba(0,0,0,.18)"/> <p style="max-width:620px;margin:22px auto;color:var(--muted)"> Helping small businesses get more from Microsoft 365 through professional consultancy, migration, security and ongoing support. </p> </div> <div class="footer-grid"> <div class="footer-column"> <h3>Core Services</h3> <div class="footer-links"> <a href="index.html#services">Microsoft 365 Foundation</a> <a href="index.html#services">Email Migration</a> <a href="index.html#services">Teams &amp; SharePoint</a> <a href="index.html#services">Backup</a> <a href="index.html#services">Ongoing Management</a> </div> </div> <div class="footer-column"> <h3>Explore</h3> <div class="footer-links"> <a href="index.html#journey-preview">How We Work</a> <a href="project-journey.html">From First Call to Go Live</a> <a href="index.html#project">Machine‑Tech Case Study</a> <a href="typical-investment.html">Typical Investment</a></div> </div> <div class="footer-column"> <h3>Get in Touch</h3> <div class="footer-links"> <a href="mailto:hello@cloudmonsta.com">hello@cloudmonsta.com</a> <a href="https://www.cloudmonsta.com">cloudmonsta.com</a> <span style="color:var(--muted)">Norfolk • Supporting businesses across the UK</span> </div> </div> </div> <div style="margin:40px 0;border-top:1px solid var(--border)"></div> <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap"> <span class="pill">Microsoft Certified</span> <span class="pill">20+ Years Experience</span> <span class="pill">Direct Engineer Support</span> <span class="pill">Fixed Scope Projects</span> <span class="pill">UK‑Wide Service</span> </div> <div class="footer-bottom"> <span>© 2026 CloudMonsta. All rights reserved.</span> <strong> Built on Microsoft 365.<br/> Designed, implemented and supported by CloudMonsta.<br/> <span style="font-weight:500;color:var(--muted);"> Helping small businesses work smarter with Microsoft 365. </span> </strong> </div> </div> </div>
 </footer>
