@@ -2194,3 +2194,30 @@ summary{cursor:pointer;font-weight:800}details p{color:var(--muted);margin:13px 
 @media(max-width:900px){.article-shell{grid-template-columns:1fr}.sidebar{position:static;order:-1}.summary-grid,.related-grid,.article-cta{grid-template-columns:1fr}}
 @media(max-width:620px){.article-hero{padding-top:46px}.article-card,.summary-panel,.related-card,.article-cta{padding:21px}}
 
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+@media (max-width: 960px) {
+  .nav {
+    position: relative;
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid var(--line);
+    box-shadow: var(--shadow-sm);
+    padding: 12px 0;
+    z-index: 1000;
+  }
+
+  .nav-links.open a {
+    padding: 14px 24px;
+    border-bottom: 0;
+  }
+}
