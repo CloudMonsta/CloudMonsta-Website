@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.cloudmonsta.co.uk/sitemap.xml
+Sitemap: https://www.cloudmonsta.com/sitemap.xml

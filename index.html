@@ -1,305 +1,278 @@
-<!DOCTYPE html>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CloudMonsta | Microsoft 365, IT Support &amp; Business Technology</title>
+<meta name="description" content="CloudMonsta helps small businesses with Microsoft 365 setup, migration, management, backup, Teams, SharePoint, business email and practical IT support across Norfolk and the UK.">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="css/cloudmonsta.css">
 
-<html lang="en">
-<head> <meta charset="utf-8"/> <meta content="width=device-width, initial-scale=1.0" name="viewport"/> <title>CloudMonsta | Microsoft 365, IT Support &amp; Business Technology</title> <meta content="CloudMonsta helps small businesses with Microsoft 365 setup, migration, management, backup, Teams, SharePoint, business email and practical IT support across Norfolk and the UK." name="description"/> <meta content="Microsoft 365 setup Norfolk, Microsoft 365 small business, business email setup, Teams setup, SharePoint setup, IT support Norfolk, Microsoft 365 migration" name="keywords"/> <meta content="CloudMonsta" name="author"/> <meta content="index, follow" name="robots"/> <meta content="#080b1f" name="theme-color"/> <meta content="telephone=no" name="format-detection"/> <!-- Google Analytics --> <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NNRHWJEC57"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-NNRHWJEC57'); </script> <script type="application/ld+json"> { "@context": "https://schema.org", "@type": "LocalBusiness", "name": "CloudMonsta", "url": "https://www.cloudmonsta.co.uk/", "description": "Microsoft 365 setup, business email, Teams, SharePoint and security hardening for small businesses in Norfolk and across the UK.", "areaServed": ["Norfolk", "United Kingdom"], "founder": { "@type": "Person", "name": "Marc Mailey" }, "serviceType": [ "Microsoft 365 setup", "Business email setup", "SharePoint setup", "Teams setup", "Small business IT support" ] } </script> <link href="https://www.cloudmonsta.co.uk/" rel="canonical"/>
-<!-- Open Graph / Social Sharing -->
-<meta content="website" property="og:type"/>
-<meta content="CloudMonsta" property="og:site_name"/>
-<meta content="CloudMonsta | Microsoft 365, IT Support &amp; Business Technology" property="og:title"/>
-<meta content="Professional Microsoft 365 setup, migration, backup, Teams, SharePoint, business email and practical IT support across Norfolk and the UK." property="og:description"/>
-<meta content="https://www.cloudmonsta.co.uk/" property="og:url"/>
-<meta content="https://www.cloudmonsta.co.uk/og-image.png" property="og:image"/>
-<meta content="image/png" property="og:image:type"/>
-<meta content="1106" property="og:image:width"/>
-<meta content="718" property="og:image:height"/>
-<meta content="CloudMonsta logo" property="og:image:alt"/>
-<!-- Twitter / X -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="CloudMonsta | Microsoft 365, IT Support &amp; Business Technology" name="twitter:title"/>
-<meta content="Professional Microsoft 365 setup, migration, backup, Teams, SharePoint, business email and practical IT support across Norfolk and the UK." name="twitter:description"/>
-<meta content="https://www.cloudmonsta.co.uk/og-image.png" name="twitter:image"/>
-<meta content="CloudMonsta logo" name="twitter:image:alt"/> <style> :root { --bg: #070a18; --bg-soft: #10152b; --card: rgba(255, 255, 255, 0.075); --card-strong: rgba(255, 255, 255, 0.11); --text: #f7f8ff; --muted: #bbc1d9; --purple: #8d5cff; --cyan: #26d9ff; --green: #5fffb0; --border: rgba(255, 255, 255, 0.14); --shadow: 0 24px 70px rgba(0, 0, 0, 0.35); --radius: 28px; } * { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; min-width: 320px; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: radial-gradient(circle at 15% 10%, rgba(141, 92, 255, 0.35), transparent 32%), radial-gradient(circle at 80% 0%, rgba(38, 217, 255, 0.22), transparent 28%), linear-gradient(180deg, #070a18 0%, #090c1d 44%, #050712 100%); color: var(--text); line-height: 1.55; } a { color: inherit; text-decoration: none; } .container { width: min(1160px, calc(100% - 32px)); margin: 0 auto; } header { position: sticky; top: 0; z-index: 20; background: rgba(7, 10, 24, 0.78); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border); } .nav { height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; } .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; letter-spacing: -0.04em; font-size: 1.35rem; } .brand-mark { width: 44px; height: 44px; border-radius: 16px; background: linear-gradient(135deg, var(--purple), var(--cyan)); display: grid; place-items: center; box-shadow: 0 16px 40px rgba(38, 217, 255, 0.18); } .brand-mark svg { width: 27px; height: 27px; } .nav-links { display: flex; align-items: center; gap: 24px; color: var(--muted); font-size: 0.95rem; } .nav-links a:hover { color: var(--text); } .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border-radius: 999px; font-weight: 800; background: linear-gradient(135deg, var(--purple), var(--cyan)); color: #fff; box-shadow: 0 18px 38px rgba(38, 217, 255, 0.2); border: 0; cursor: pointer; transition: transform 0.18s ease, box-shadow 0.18s ease; } .button:hover { transform: translateY(-2px); box-shadow: 0 24px 48px rgba(38, 217, 255, 0.28); } .button.secondary { background: rgba(255, 255, 255, 0.08); box-shadow: none; border: 1px solid var(--border); color: var(--text); } .hero { padding: clamp(42px, 8vw, 86px) 0 clamp(34px, 6vw, 54px); } .hero-grid { display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 46px; align-items: center; } .eyebrow { display: inline-flex; align-items: center; gap: 10px; padding: 9px 14px; border: 1px solid var(--border); background: rgba(255, 255, 255, 0.07); border-radius: 999px; color: #dfe7ff; font-size: 0.88rem; font-weight: 700; margin-bottom: 22px; } .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green); box-shadow: 0 0 18px var(--green); } h1, h2, h3 { line-height: 1.05; margin: 0; letter-spacing: -0.055em; } h1 { font-size: clamp(3rem, 7vw, 6.4rem); max-width: 850px; } h1 span { background: linear-gradient(135deg, #fff, #cdd9ff 42%, #73e9ff); -webkit-background-clip: text; color: transparent; } .hero-copy { max-width: 690px; margin: 24px 0 0; color: var(--muted); font-size: clamp(1.08rem, 2vw, 1.32rem); } .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; } .trust-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; } .pill { border: 1px solid var(--border); background: rgba(255, 255, 255, 0.06); color: #dce3ff; padding: 10px 13px; border-radius: 999px; font-size: 0.92rem; font-weight: 700; } .price-card { position: relative; overflow: hidden; padding: 32px; border-radius: var(--radius); border: 1px solid var(--border); background: linear-gradient(180deg, rgba(255,255,255,0.13), rgba(255,255,255,0.06)); box-shadow: var(--shadow); } .price-card::before { content: ""; position: absolute; width: 240px; height: 240px; right: -80px; top: -80px; border-radius: 50%; background: radial-gradient(circle, rgba(38,217,255,0.32), transparent 68%); } .price-card > * { position: relative; } .launch { color: var(--cyan); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 900; font-size: 0.78rem; } .price-card h2 { font-size: 2rem; margin-top: 12px; } .price { font-size: 4.8rem; font-weight: 950; letter-spacing: -0.08em; margin: 20px 0 2px; } .price small { font-size: 1rem; color: var(--muted); letter-spacing: 0; font-weight: 700; } .checklist { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 14px; } .checklist li { display: grid; grid-template-columns: 26px 1fr; gap: 10px; color: #e8ecff; } .tick { width: 24px; height: 24px; border-radius: 50%; background: rgba(95, 255, 176, 0.16); color: var(--green); display: grid; place-items: center; font-weight: 900; } .section { padding: clamp(52px, 8vw, 76px) 0; } .section-title { max-width: 820px; margin-bottom: 36px; } .section-title h2 { font-size: clamp(2.2rem, 4vw, 4rem); } .section-title p { margin: 18px 0 0; color: var(--muted); font-size: 1.14rem; } .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; } .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; } .card { padding: 26px; border: 1px solid var(--border); background: var(--card); border-radius: 24px; min-height: 100%; } .card strong { color: var(--text); font-size: 1.1rem; } .card p { color: var(--muted); margin: 10px 0 0; } .icon { width: 54px; height: 54px; border-radius: 18px; display: grid; place-items: center; margin-bottom: 18px; background: linear-gradient(135deg, rgba(141,92,255,0.24), rgba(38,217,255,0.16)); border: 1px solid var(--border); color: var(--cyan); } .icon svg { width: 29px; height: 29px; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; } .proof { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 26px; align-items: stretch; } .founder { background: linear-gradient(180deg, rgba(141,92,255,0.2), rgba(255,255,255,0.06)); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px; } .founder-profile { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; } .avatar { width: 108px; height: 108px; flex: 0 0 108px; border-radius: 50%; background: linear-gradient(rgba(7,10,24,0.2), rgba(7,10,24,0.2)), linear-gradient(135deg, var(--purple), var(--cyan)); border: 3px solid rgba(255,255,255,0.24); display: grid; place-items: center; overflow: hidden; box-shadow: 0 18px 42px rgba(38, 217, 255, 0.18); color: rgba(255,255,255,0.9); font-weight: 900; text-align: center; font-size: 0.8rem; line-height: 1.2; padding: 16px; } .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transform: scale(1.5); display: block;
-} .founder-meta strong { display: block; font-size: 1.35rem; letter-spacing: -0.03em; } .founder-meta span { display: block; color: var(--cyan); font-weight: 800; margin-top: 3px; } .founder h2 { font-size: 2.3rem; } .founder p { color: var(--muted); } .process { counter-reset: step; display: grid; gap: 16px; } .step { counter-increment: step; display: grid; grid-template-columns: 52px 1fr; gap: 16px; align-items: start; padding: 24px; border: 1px solid var(--border); background: var(--card); border-radius: 24px; } .step::before { content: counter(step); width: 52px; height: 52px; border-radius: 18px; background: rgba(38, 217, 255, 0.12); color: var(--cyan); display: grid; place-items: center; font-weight: 950; font-size: 1.2rem; } .step h3 { font-size: 1.35rem; } .step p { color: var(--muted); margin: 8px 0 0; } .faq { display: grid; gap: 12px; } details { border: 1px solid var(--border); background: rgba(255, 255, 255, 0.06); border-radius: 20px; padding: 20px 22px; } summary { cursor: pointer; font-weight: 850; font-size: 1.05rem; } details p { color: var(--muted); margin: 14px 0 0; } .cta-panel { border: 1px solid var(--border); background: radial-gradient(circle at 20% 10%, rgba(141, 92, 255, 0.32), transparent 34%), radial-gradient(circle at 85% 30%, rgba(38, 217, 255, 0.22), transparent 34%), rgba(255,255,255,0.075); border-radius: 34px; padding: clamp(30px, 6vw, 58px); display: grid; grid-template-columns: 1fr 0.85fr; gap: 28px; align-items: center; box-shadow: var(--shadow); } .cta-panel h2 { font-size: clamp(2.2rem, 4.6vw, 4.4rem); } .cta-panel p { color: var(--muted); font-size: 1.13rem; } form { display: grid; gap: 12px; background: rgba(0, 0, 0, 0.16); border: 1px solid var(--border); border-radius: 24px; padding: 22px; } input, textarea, select { width: 100%; border: 1px solid var(--border); background: rgba(255, 255, 255, 0.08); color: var(--text); border-radius: 14px; padding: 14px 15px; font: inherit; outline: none; } select { appearance: none; -webkit-appearance: none; -moz-appearance: none;
-} select option { background: #10152b; color: #ffffff;
-} textarea { min-height: 110px; resize: vertical; } input::placeholder, textarea::placeholder { color: #8f96b5; } footer { padding: 34px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.95rem; } .footer-row { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; } @media (max-width: 900px) { .nav-links { display: none; } .hero-grid, .proof, .cta-panel, .grid-2, .grid-3 { grid-template-columns: 1fr; } .hero { padding-top: 46px; } .price { font-size: 4rem; } .price-card { order: -1; } .cta-panel { gap: 22px; } } @media (max-width: 560px) { .container { width: min(100% - 24px, 1160px); } .nav { height: auto; min-height: 68px; padding: 12px 0; } .brand { font-size: 1.08rem; } .brand-mark { width: 40px; height: 40px; border-radius: 14px; } .nav .button { display: none; } .button { width: 100%; min-height: 52px; } .hero-actions .button { width: 100%; } .trust-row { gap: 9px; } .pill { font-size: 0.82rem; padding: 8px 11px; } .price-card, .card, .founder, form { padding: 20px; border-radius: 22px; } .cta-panel { border-radius: 24px; padding: 22px; } h1 { font-size: clamp(2.45rem, 13vw, 3.15rem); letter-spacing: -0.065em; } .hero-copy, .section-title p, .cta-panel p { font-size: 1rem; } .section-title { margin-bottom: 24px; } .section-title h2, .cta-panel h2 { font-size: clamp(2rem, 10vw, 2.7rem); } .price { font-size: clamp(3.2rem, 17vw, 4rem); } .founder-profile { align-items: flex-start; gap: 14px; } .avatar { width: 88px; height: 88px; flex-basis: 88px; } .founder-meta strong { font-size: 1.12rem; } .founder-meta span { font-size: 0.9rem; } .step { grid-template-columns: 44px 1fr; padding: 18px; } .step::before { width: 44px; height: 44px; border-radius: 15px; } input, textarea, select { font-size: 16px; } } @media (max-width: 390px) { .brand { font-size: 1rem; } .founder-profile { flex-direction: column; } .avatar { width: 96px; height: 96px; } } .site-footer { margin-top: 34px; border-top: 1px solid var(--border); background: radial-gradient(circle at 15% 0%, rgba(141,92,255,0.16), transparent 28%), radial-gradient(circle at 85% 10%, rgba(38,217,255,0.12), transparent 30%), rgba(4, 6, 16, 0.92); } .footer-cta { padding: clamp(42px, 7vw, 72px) 0; text-align: center; border-bottom: 1px solid var(--border); } .footer-cta h2 { font-size: clamp(2.2rem, 4.6vw, 4.4rem); max-width: 850px; margin: 0 auto; } .footer-cta p { color: var(--muted); max-width: 720px; margin: 18px auto 28px; font-size: 1.12rem; } .footer-main { padding: 54px 0 34px; } .footer-grid { display: grid; grid-template-columns: 1.3fr repeat(3, 0.8fr); gap: 34px; align-items: start; } .footer-brand img { height: 58px; width: auto; display: block; background: #fff; padding: 8px 14px; border-radius: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); margin-bottom: 18px; } .footer-brand p { color: var(--muted); max-width: 360px; margin: 0; } .footer-column h3 { font-size: 1rem; letter-spacing: 0; margin-bottom: 14px; } .footer-links { display: grid; gap: 10px; } .footer-links a { color: var(--muted); font-size: 0.95rem; } .footer-links a:hover { color: var(--text); } .footer-contact { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; padding-top: 28px; border-top: 1px solid var(--border); } .contact-chip { border: 1px solid var(--border); background: rgba(255,255,255,0.055); border-radius: 999px; padding: 10px 14px; color: #dfe7ff; font-size: 0.9rem; font-weight: 700; } .footer-trust { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; } .footer-bottom { margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; color: var(--muted); font-size: 0.9rem; } .footer-bottom strong { color: var(--text); } @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } } @media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; } .footer-cta .button { width: 100%; } .footer-contact, .footer-trust { display: grid; } .contact-chip, .footer-trust .pill { width: 100%; text-align: center; } } .footer-grid{ display:grid; grid-template-columns:repeat(3,minmax(220px,280px)); justify-content:center; text-align:center; gap:48px;
-}
-.footer-brand{ text-align:center; max-width:700px; margin:0 auto 48px;
-}
-.footer-brand img{ margin:0 auto 18px;
-}
-.footer-links{ justify-items:center;
-}
-.footer-column h3{ text-align:center;
-}
-.footer-contact,
-.footer-trust,
-.footer-bottom{ justify-content:center !important; text-align:center;
-}
-.footer-bottom{ flex-direction:column; align-items:center;
-}
-@media(max-width:900px){ .footer-grid{ grid-template-columns:1fr; }
-} 
-.service-card{
-display:block;
-text-decoration:none;
-color:inherit;
-transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease;
-}
-.service-card:hover{
-transform:translateY(-6px);
-border-color:rgba(38,217,255,.45)!important;
-box-shadow:0 22px 50px rgba(38,217,255,.12);
-background:rgba(255,255,255,.09);
-}
-.service-card strong{transition:color .2s ease;}
-.service-card:hover strong{color:var(--cyan);}
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NNRHWJEC57"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NNRHWJEC57');
+</script>
 
-.featured-case-study-panel{
-  border:1px solid var(--border);
-  border-radius:34px;
-  padding:clamp(28px,5vw,48px);
-  background:
-    radial-gradient(circle at 18% 12%,rgba(141,92,255,.24),transparent 34%),
-    radial-gradient(circle at 86% 28%,rgba(38,217,255,.16),transparent 34%),
-    rgba(255,255,255,.06);
-  box-shadow:var(--shadow);
-}
 
-.case-study-top{
+<style>
+/* Homepage How We Work cards - intentionally page scoped */
+#journey-preview .journey-grid{
   display:grid;
-  grid-template-columns:150px 1fr;
-  gap:28px;
-  align-items:center;
-  margin-bottom:28px;
+  grid-template-columns:repeat(5,1fr);
+  gap:11px;
 }
-
-.case-study-logo-wrap{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:110px;
-  padding:16px;
-  border:1px solid var(--border);
-  border-radius:20px;
-  background:#fff;
-  box-shadow:0 12px 30px rgba(0,0,0,.18);
-}
-
-.case-study-logo-wrap img{
-  width:100%;
-  max-width:120px;
-  height:auto;
+#journey-preview .home-journey-step{
   display:block;
-  object-fit:contain;
+  padding:23px;
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:18px;
+  box-shadow:var(--shadow-sm);
+  min-width:0;
 }
-
-.case-study-client h3{
-  font-size:clamp(1.8rem,3.2vw,2.8rem);
-  margin:8px 0 0;
+#journey-preview .home-journey-step span{
+  display:block;
+  color:var(--blue);
+  font-size:.76rem;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  margin-bottom:10px;
 }
-
-.case-study-client p{
+#journey-preview .home-journey-step strong{
+  display:block;
+  font-size:1.08rem;
+  color:var(--ink);
+}
+#journey-preview .home-journey-step p{
   color:var(--muted);
-  margin:10px 0 0;
-  font-size:1.05rem;
+  margin:9px 0 0;
 }
-
-.case-study-stars{
-  color:#ffd76a;
-  letter-spacing:.18em;
-  font-size:1.15rem;
-  margin-bottom:14px;
+@media(max-width:960px){
+  #journey-preview .journey-grid{grid-template-columns:1fr 1fr}
 }
-
-.case-study-quote{
-  margin:0;
-  padding:24px;
-  border:1px solid var(--border);
-  border-radius:22px;
-  background:rgba(0,0,0,.14);
-}
-
-.case-study-quote blockquote{
-  margin:0;
-  color:var(--text);
-  font-size:clamp(1.15rem,2vw,1.55rem);
-  line-height:1.5;
-  letter-spacing:-.025em;
-  font-weight:750;
-}
-
-.case-study-quote footer{
-  margin-top:18px;
-  padding:0;
-  border:0;
-  color:var(--muted);
-  font-size:.95rem;
-}
-
-.case-study-quote footer strong{
-  color:var(--text);
-  font-size:1.02rem;
-}
-
-.case-study-delivery-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-  margin-top:22px;
-}
-
-.case-study-delivery-grid .card{
-  padding:22px;
-}
-
-.case-study-action{
-  margin-top:26px;
-  text-align:center;
-}
-
-@media(max-width:700px){
-  .case-study-top{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
-
-  .case-study-logo-wrap{
-    max-width:180px;
-    width:100%;
-    margin:0 auto;
-  }
-
-  .case-study-delivery-grid{
-    grid-template-columns:1fr;
-  }
+@media(max-width:620px){
+  #journey-preview .journey-grid{grid-template-columns:1fr}
 }
 </style>
-</head> <body id="top"> <!-- CloudMonsta Master Homepage v2.0 --> <header> <div class="container nav"> <a aria-label="CloudMonsta home" class="brand" href="#top"> <img alt="CloudMonsta" src="logo_.png" style=" height: 58px; width: auto; display: block; background: #ffffff; padding: 8px 14px; border-radius: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); "/>
-</a> <nav aria-label="Primary navigation" class="nav-links"> <a href="#services">Services</a> <a href="#journey-preview">How We Work</a><a href="advice.html">Advice</a> <a href="#project">Case Study</a> <a href="#why">Why CloudMonsta</a> <a href="#process">How it works</a> </nav> <a class="button" href="#contact">Book free call</a> </div> </header> <main> <!-- HERO --> <section class="hero"> <div class="container hero-grid"> <div> <div class="eyebrow"><span class="dot"></span> Microsoft 365 and practical IT support for small businesses</div> <h1>Professional Microsoft 365 &amp; IT solutions for<span> growing businesses.</span></h1> <p class="hero-copy">From Microsoft 365 migrations and business email to SharePoint, Teams, security, backup and ongoing support, CloudMonsta helps small businesses work smarter, stay secure and grow with confidence.</p> <div class="hero-actions"> <a class="button" href="#contact">Book a free 15-minute consultation</a> <a class="button secondary" href="#services">Explore services</a> </div> <div aria-label="Key benefits" class="trust-row"> <span class="pill">20+ years IT experience</span> <span class="pill">Microsoft certified</span> <span class="pill">Direct, personal support</span> <span class="pill">Norfolk-based, UK coverage</span> </div> </div> <aside aria-label="CloudMonsta service overview" class="price-card"> <div class="launch">Microsoft 365 specialist</div> <h2>Technology that works for your business</h2> <div class="price" style="font-size:3.2rem; line-height:1;">Clear advice.<br/><small>Practical delivery. Ongoing support.</small></div> <p style="color: var(--muted); margin: 18px 0 0;">Choose the modules your business needs, from setup and migration through to backup, security and ongoing management.</p> <ul class="checklist"> <li><span class="tick">✓</span><span>Start with the Microsoft 365 Foundation</span></li> <li><span class="tick">✓</span><span>Add migration, Teams or security modules</span></li> <li><span class="tick">✓</span><span>Add backup and ongoing management</span></li> <li><span class="tick">✓</span><span>Only pay for the modules you need</span></li> </ul> <div style="margin-top: 28px;"> <a class="button" href="#contact">Talk about your business</a> </div> </aside> </div> </section> <!-- SERVICES MODULES --> <section class="section" id="services"> <div class="container"> <div class="section-title"> <h2>Build your own Microsoft 365 package</h2> <p>Choose the modules your business needs now, then add more as you grow. Every project is clearly scoped so you only pay for the work that is relevant to you.</p> </div> <div class="grid-3"> <a class="card service-card" href="microsoft-365-foundation.html"> <div class="launch">Module 1</div> <div class="icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 .4-8A6 6 0 0 0 6 8.5 4.8 4.8 0 0 0 7 18z"></path><path d="M9 14h6"></path></svg></div> <strong>Microsoft 365 Foundation</strong> <p>The essential starting point for a new tenant or an existing setup that needs to be configured properly.</p> <ul class="checklist"> <li><span class="tick">✓</span><span>Tenant and domain setup</span></li> <li><span class="tick">✓</span><span>Users and shared mailboxes</span></li> <li><span class="tick">✓</span><span>SPF, DKIM and DMARC</span></li> <li><span class="tick">✓</span><span>MFA and secure admin setup</span></li> </ul> </a> <a class="card service-card" href="email-migration.html"> <div class="launch">Module 2</div> <div class="icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7"></path><path d="M18 3v6h-6"></path><path d="M21 12a9 9 0 0 1-15 6.7"></path><path d="M6 21v-6h6"></path></svg></div> <strong>Email Migration</strong> <p>For businesses moving from Google Workspace, old email hosting or another Microsoft 365 tenant.</p> <ul class="checklist"> <li><span class="tick">✓</span><span>Migration planning</span></li> <li><span class="tick">✓</span><span>Mailbox migration</span></li> <li><span class="tick">✓</span><span>DNS cutover</span></li> <li><span class="tick">✓</span><span>Post-migration checks</span></li> </ul> </a> <a class="card service-card" href="teams-sharepoint.html"> <div class="launch">Module 3</div> <div class="icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2h6.5A2.5 2.5 0 0 1 21 9.5v7A2.5 2.5 0 0 1 18.5 19h-13A2.5 2.5 0 0 1 3 16.5v-9z"></path><path d="M7 13h10"></path></svg></div> <strong>Teams &amp; SharePoint</strong> <p>A structured collaboration and document environment for your staff.</p> <ul class="checklist"> <li><span class="tick">✓</span><span>Company Team setup</span></li> <li><span class="tick">✓</span><span>Department channels</span></li> <li><span class="tick">✓</span><span>Document structure</span></li> <li><span class="tick">✓</span><span>Permissions and file migration</span></li> </ul> </a> <a class="card service-card" href="microsoft-365-backup.html"> <div class="launch">Module 4</div> <div class="icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3v4"></path><path d="M12 17v4"></path><path d="M4.9 4.9l2.8 2.8"></path><path d="M16.3 16.3l2.8 2.8"></path><path d="M3 12h4"></path><path d="M17 12h4"></path><circle cx="12" cy="12" r="4"></circle></svg></div> <strong>Microsoft 365 Backup</strong> <p>Independent protection for Microsoft 365 data with practical recovery options.</p> <ul class="checklist"> <li><span class="tick">✓</span><span>Exchange backup</span></li> <li><span class="tick">✓</span><span>OneDrive backup</span></li> <li><span class="tick">✓</span><span>SharePoint and Teams protection</span></li> <li><span class="tick">✓</span><span>Retention and restore support</span></li> </ul> </a> <a class="card service-card" href="ongoing-management.html"> <div class="launch">Module 5</div> <div class="icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg></div> <strong>Ongoing Management</strong> <p>Monthly Microsoft 365 administration, maintenance and remote support.</p> <ul class="checklist"> <li><span class="tick">✓</span><span>User and licence changes</span></li> <li><span class="tick">✓</span><span>Shared mailbox administration</span></li> <li><span class="tick">✓</span><span>Troubleshooting and maintenance</span></li> <li><span class="tick">✓</span><span>Security monitoring and reviews</span></li> </ul> </a> <a class="card service-card" href="business-websites.html"> <div class="launch">Module 6</div> <div class="icon"><svg aria-hidden="true" viewbox="0 0 24 24">
-<rect height="16" rx="2" width="18" x="3" y="4"></rect>
-<path d="M3 8h18"></path>
-<path d="M7 6h.01"></path>
-<path d="M10 6h.01"></path>
-<path d="M7 12h10"></path>
-<path d="M7 16h6"></path>
-</svg></div> <strong>Business Websites</strong> <p>Professional, responsive websites for businesses that need credibility without unnecessary complexity.</p> <ul class="checklist"><li><span class="tick">✓</span><span>Responsive business website</span></li><li><span class="tick">✓</span><span>Domain and SSL setup</span></li><li><span class="tick">✓</span><span>Google Analytics and SEO foundations</span></li><li><span class="tick">✓</span><span>Contact forms and launch support</span></li></ul> </a></div> <div class="cta-panel" style="margin-top: 28px; grid-template-columns: 1fr auto;"> <div> <h2 style="font-size: clamp(2rem, 4vw, 3.4rem);">Not sure which modules you need?</h2> <p>Start with a free consultation. CloudMonsta will review your current setup and recommend the smallest sensible combination of modules for your business.</p> </div> <div> <a class="button" href="#contact">Build your package</a> </div> </div> </div> </section> <!-- HOW WE WORK PREVIEW --> <section class="section" id="journey-preview"> <div class="container"> <div style="border:1px solid rgba(255,255,255,.14);border-radius:28px;padding:48px; background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));text-align:center;"> <div class="eyebrow"><span class="dot"></span> From First Call to Go Live</div> <h2 style="font-size:clamp(2.2rem,4vw,3.8rem);margin-bottom:18px;">Every CloudMonsta project follows a clear, proven process.</h2> <p style="max-width:780px;margin:0 auto 34px;color:var(--muted);font-size:1.1rem;"> From your first consultation through to migration, documentation and ongoing support, you'll always know what's happening and what comes next. </p> <div style="display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap; font-weight:700;color:#fff;margin-bottom:34px;"> <span class="pill">Consultation</span> ➜ <span class="pill">Business Review</span> ➜ <span class="pill">Proposal</span> ➜ <span class="pill">Planning</span> ➜ <span class="pill">Implementation</span> ➜ <span class="pill">Go Live</span> ➜ <span class="pill">Support</span> </div> <a class="button" href="project-journey.html">See the Full Journey</a> </div> </div>
-</section> <!-- EXPERIENCE / FOUNDER --> <section class="section" id="proof"> <div class="container proof"> <div class="founder"> <div class="founder-profile"> <div aria-label="Founder photo placeholder" class="avatar"> <img alt="Marc, CloudMonsta founder" src="Marc.png"/> </div> <div class="founder-meta"> <strong>Marc</strong> <span>Founder of CloudMonsta | IT Infrastructure Engineer</span> </div> </div> <h2>Experience you can rely on.</h2> <p>Small businesses deserve the same level of Microsoft 365 expertise as large organisations—without the complexity or enterprise price tag.</p> <p>I'm <strong>Marc Mailey</strong>, an IT Infrastructure Engineer with over <strong>20 years' experience</strong> delivering Microsoft technologies across healthcare, education, charities and commercial organisations.</p> <p>CloudMonsta was created to help businesses implement Microsoft 365 properly. From migrations and security to ongoing management, every project is personally delivered by me with a focus on reliability, clear communication and long-term support.</p> <div class="trust-row" style="margin-top:24px"> <span class="pill">20+ Years Experience</span> <span class="pill">Microsoft Certified</span> <span class="pill">Direct Engineer</span> <span class="pill">Fixed Scope Projects</span> <span class="pill">UK Support</span> </div> </div> <div class="grid-2"> <div class="card"><div class="icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3z"></path><path d="M9.5 12l1.8 1.8L15 10"></path></svg></div><strong>Security from day one</strong><p>Multi-Factor Authentication, secure administrator accounts and sensible security settings help protect your business from common threats and unauthorised access.</p></div> <div class="card"><div class="icon"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="M4 7l8 6 8-6"></path></svg></div><strong>Email that looks professional</strong><p>Business email using your domain, configured properly with guidance for Outlook and mobile devices.</p></div> <div class="card"><div class="icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2h6.5A2.5 2.5 0 0 1 21 9.5v7A2.5 2.5 0 0 1 18.5 19h-13A2.5 2.5 0 0 1 3 16.5v-9z"></path><path d="M7 13h10"></path></svg></div><strong>Less file chaos</strong><p>A simple Teams and SharePoint structure so files are not scattered across laptops, inboxes and USB drives.</p></div> <div class="card"><div class="icon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3v4"></path><path d="M12 17v4"></path><path d="M4.9 4.9l2.8 2.8"></path><path d="M16.3 16.3l2.8 2.8"></path><path d="M3 12h4"></path><path d="M17 12h4"></path><path d="M4.9 19.1l2.8-2.8"></path><path d="M16.3 7.7l2.8-2.8"></path><circle cx="12" cy="12" r="4"></circle></svg></div><strong>Clear guidance, no jargon</strong><p>Straightforward handover documentation and practical guidance so you understand exactly what has been set up and how to use it with confidence.</p></div> </div> </div> </section> <!-- FEATURED CASE STUDY --> <section class="section" id="project">
+
+</head><body id="top"><div id="site-header"></div><main>
+<section class="hero">
 <div class="container">
-<div class="section-title">
-<h2>Featured Case Study</h2>
-<p>See how CloudMonsta helped Machine-Tech Ltd move from Google Workspace to Microsoft 365 and establish a more secure, manageable business platform.</p>
-</div>
-<div class="featured-case-study-panel">
-<div class="case-study-top">
-<div class="case-study-logo-wrap">
-<img alt="MachineTech Ltd logo" src="MachineTech-logo.png"/>
-</div>
-<div class="case-study-client">
-<div class="launch">Featured client</div>
-<h3>Machine-Tech Ltd</h3>
-<p>Google Workspace to Microsoft 365 migration, collaboration, security and ongoing support.</p>
-</div>
-</div>
-<div class="case-study-quote">
-<div aria-label="Five-star client feedback" class="case-study-stars">★★★★★</div>
-<blockquote>
-          “CloudMonsta made our Microsoft 365 integration completely painless for our team.
-          Marc delivered clear, straightforward communication throughout the setup, and their ongoing IT support
-          keeps MachineTech running without a hitch. Reliable, professional, and jargon-free—highly recommended!”
-        </blockquote>
-<footer>
-<strong>Ash Mills</strong><br/>
-          Managing Director &amp; Co-Founder, MachineTech Ltd
-        </footer>
-</div>
-<div class="case-study-delivery-grid">
-<div class="card">
-<strong>Google Workspace migration</strong>
-<p>Users, mailboxes and business data moved into Microsoft 365 with a planned cutover.</p>
-</div>
-<div class="card">
-<strong>Business email and DNS</strong>
-<p>Exchange Online configured with SPF, DKIM and DMARC to strengthen delivery and protection.</p>
-</div>
-<div class="card">
-<strong>Teams and SharePoint</strong>
-<p>A practical collaboration and document structure created for day-to-day business use.</p>
-</div>
-<div class="card">
-<strong>Security and ongoing support</strong>
-<p>MFA, secure administration, handover documentation and ongoing Microsoft 365 support.</p>
-</div>
-</div>
-<div class="case-study-action">
-<a class="button" href="machine-tech-case-study.html">Read the Full Case Study</a>
-</div>
-</div>
-</div>
-</section> <section class="section" id="why"> <div class="container"> <div class="section-title"> <h2>Why businesses choose CloudMonsta</h2> <p>Experienced consultancy without the overhead, jargon or distance of a large IT provider.</p> </div> <div class="grid-3"> <div class="card"><strong>20+ years of IT experience</strong><p>Hands-on experience across infrastructure, Microsoft 365, security, end users and business-critical environments.</p></div> <div class="card"><strong>Microsoft certified</strong><p>Current Microsoft certifications backed by practical implementation and troubleshooting experience.</p></div> <div class="card"><strong>You deal directly with me</strong><p>No call centre and no outsourced support. You work directly with the person delivering your solution.</p></div> <div class="card"><strong>Clear scope and pricing</strong><p>You know what is included, what it costs and what happens next before work begins.</p></div> <div class="card"><strong>Small-business focused</strong><p>Advice and technology sized around what your business actually needs rather than unnecessary enterprise complexity.</p></div> <div class="card"><strong>Norfolk-based, UK support</strong><p>Local service for Norfolk businesses with remote delivery and support available throughout the UK.</p></div> </div> </div> </section> <!-- PROCESS --> <section class="section" id="process"> <div class="container"> <div class="section-title"> <h2>Simple process. No drama.</h2> <p>You get a clear path from messy setup to working Microsoft 365 environment.</p> </div> <div class="process"> <div class="step"><div><h3>Free consultation</h3><p>We check your current email, domain, users, files, devices and what you actually need. No pressure, no nonsense.</p></div></div> <div class="step"><div><h3>Scope and fixed price</h3><p>You receive a clear scope before work starts, including what is included, what is not included and any licence costs.</p></div></div> <div class="step"><div><h3>Setup and migration</h3><p>CloudMonsta configures Microsoft 365, business email, users, security, Teams and SharePoint.</p></div></div> <div class="step"><div><h3>Handover and support</h3><p>You get clear guidance and 30 days support so the setup is not just dumped on you.</p></div></div> </div> </div> </section> <!-- FAQ --> <section class="section" id="faq"> <div class="container"> <div class="section-title"> <h2>Questions business owners usually ask</h2> </div> <div class="faq"> <details open=""> <summary>Are Microsoft 365 licence costs included?</summary> <p>No. The package covers setup and support. Microsoft licence costs are separate and depend on the plan you choose.</p> </details> <details> <summary>Is this suitable if we already have email?</summary> <p>Yes. The package is designed for businesses moving from old email hosting, personal accounts, Google Workspace or an existing Microsoft 365 setup that needs sorting properly.</p> </details> <details> <summary>Can you migrate files and email?</summary> <p>Yes, but migration needs to be scoped first. Small, straightforward migrations can usually fit within the package. Messy or large migrations may need additional work.</p> </details> <details> <summary>Do you work outside Norfolk?</summary> <p>Yes. Most Microsoft 365 setup work can be completed remotely for businesses across the UK.</p> </details> <details> <summary>What happens after the 30 days support?</summary> <p>You can request ad-hoc support or discuss an ongoing support arrangement if your business needs continued help.</p> </details> </div> </div> </section>
-<section class="section">
-<div class="container">
-<div class="cta-panel" style="grid-template-columns:1fr auto;">
-<div>
-<div class="eyebrow"><span class="dot"></span> Typical Investment</div>
-<h2 style="font-size:clamp(2rem,4vw,3.2rem);">Need an idea of the investment?</h2>
-<p>Every business is different, but our Typical Investment Guide provides indicative pricing for our most common projects and ongoing services before you get in touch.</p>
-</div>
-<div><a class="button secondary" href="typical-investment.html">View Typical Investment Guide</a></div>
-</div>
+  <div class="hero-grid">
+    <div class="hero-copy-open">
+      <div class="hero-kicker">Microsoft 365 and practical IT support for small businesses</div>
+      <h1>Professional Microsoft 365 &amp; IT solutions for growing businesses.</h1>
+      <p class="hero-copy">From Microsoft 365 migrations and business email to SharePoint, Teams, security, backup and ongoing support, CloudMonsta helps small businesses work smarter, stay secure and grow with confidence.</p>
+      <div class="hero-actions">
+        <a class="button" href="#contact">Book a free 15-minute consultation</a>
+        <a class="button secondary" href="#services">Explore services</a>
+      </div>
+      <div class="hero-tags">
+        <div class="hero-tag"><strong>Microsoft Certified</strong><span>Current cloud knowledge</span></div>
+        <div class="hero-tag"><strong>20+ Years IT</strong><span>Infrastructure &amp; support experience</span></div>
+        <div class="hero-tag"><strong>Real Client Delivery</strong><span>Proven Microsoft 365 migrations</span></div>
+        <div class="hero-tag"><strong>Personal Support</strong><span>Speak directly to the engineer</span></div>
+      </div>
+    </div>
+
+    <aside class="specialist-card">
+      <div class="specialist-top">
+        <div class="specialist-label">Microsoft 365 specialist</div>
+        <h2>Technology that works for your business</h2>
+        <div class="original-promise">Clear advice.<span>Practical delivery. Ongoing support.</span></div>
+        <p class="lead">Choose the modules your business needs, from setup and migration through to backup, security and ongoing management.</p>
+        <ul class="original-checklist">
+          <li><span>✓</span><div><strong>Start with the Microsoft 365 Foundation</strong><small>Tenant, domain, users, shared mailboxes and secure administration.</small></div></li>
+          <li><span>✓</span><div><strong>Add migration when you are ready to move</strong><small>Google Workspace, legacy email or another Microsoft 365 tenant.</small></div></li>
+          <li><span>✓</span><div><strong>Add Teams &amp; SharePoint for collaboration</strong><small>Create a structured place for staff, documents and departments.</small></div></li>
+          <li><span>✓</span><div><strong>Strengthen security and business email</strong><small>MFA, SPF, DKIM, DMARC and sensible Microsoft 365 hardening.</small></div></li>
+          <li><span>✓</span><div><strong>Protect data with Microsoft 365 Backup</strong><small>Independent protection for Exchange, OneDrive, SharePoint and Teams.</small></div></li>
+          <li><span>✓</span><div><strong>Add ongoing management when you need it</strong><small>Routine administration, troubleshooting, maintenance and security reviews.</small></div></li>
+        </ul>
+        <div class="specialist-foot">
+          <a class="button" href="#contact">Talk about your business</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="hero-proofbar">
+    <div><strong>Microsoft 365</strong><span>Setup, migration and management</span></div>
+    <div><strong>Security</strong><span>MFA, mail protection and hardening</span></div>
+    <div><strong>Backup</strong><span>Independent protection for business data</span></div>
+    <div><strong>Web &amp; IT</strong><span>Practical technology beyond Microsoft 365</span></div>
+  </div>
 </div>
 </section>
-<!-- CONTACT --> <section class="section" id="contact"> <div class="container"> <div class="cta-panel"> <div> <h2>Ready to make your business technology work properly?</h2> <p>Book a free 15-minute consultation to discuss your Microsoft 365 setup, migration, backup, support or website requirements.</p> <div class="trust-row"> <span class="pill">No obligation</span> <span class="pill">Clear, honest pricing</span> <span class="pill">Clear scope before work starts</span> </div> </div> <form action="https://formspree.io/f/xvzygkar" id="cloudmonsta-contact-form" method="POST"> <!-- Email subject line --> <input name="_subject" type="hidden" value="New CloudMonsta Business Enquiry"/> <!-- Redirect after successful submission (optional) --> <!-- Hidden spam trap --> <input name="_gotcha" style="display:none" type="text"/> <input name="name" placeholder="Your name" required="" type="text"/> <input name="business" placeholder="Business name" type="text"/> <input name="email" placeholder="Email address" required="" type="email"/> <input name="phone" placeholder="Phone number" type="tel"/> <select aria-label="Number of users" name="users"> <option value="">Number of users</option> <option>1–3 users</option> <option>4–6 users</option> <option>7–10 users</option> <option>More than 10 users</option> </select> <textarea name="message" placeholder="What do you need help with?" required=""></textarea> <button class="button" type="submit">Send enquiry</button>
-<p aria-live="polite" id="form-status" style="margin:8px 0 0;color:var(--muted);font-size:.95rem;"></p></form> </div> </div> </section> </main> <!-- SHARED FOOTER --> <footer class="site-footer">
-<div class="footer-main"> <div class="container"> <div style="text-align:center;margin-bottom:42px"> <img alt="CloudMonsta" src="logo_.png" style="height:64px;background:#fff;padding:10px 18px;border-radius:14px;box-shadow:0 10px 24px rgba(0,0,0,.18)"/> <p style="max-width:620px;margin:22px auto;color:var(--muted)"> Helping small businesses get more from Microsoft 365 through professional consultancy, migration, security and ongoing support. </p> </div> <div class="footer-grid"> <div class="footer-column"> <h3>Core Services</h3> <div class="footer-links"> <a href="#services">Microsoft 365 Foundation</a> <a href="#services">Email Migration</a> <a href="#services">Teams &amp; SharePoint</a> <a href="#services">Backup</a> <a href="#services">Ongoing Management</a> <a href="business-websites.html">Business Websites</a> </div> </div> <div class="footer-column"> <h3>Explore</h3> <div class="footer-links"> <a href="#journey-preview">How We Work</a> <a href="project-journey.html">From First Call to Go Live</a> <a href="#project">Machine‑Tech Case Study</a> <a href="typical-investment.html">Typical Investment</a> <a href="advice.html">Advice Centre</a></div> </div> <div class="footer-column"> <h3>Get in Touch</h3> <div class="footer-links"> <a href="mailto:hello@cloudmonsta.co.uk">hello@cloudmonsta.co.uk</a> <a href="https://www.cloudmonsta.co.uk">cloudmonsta.co.uk</a> <span style="color:var(--muted)">Norfolk • Supporting businesses across the UK</span> </div> </div> </div> <div style="margin:40px 0;border-top:1px solid var(--border)"></div> <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap"> <span class="pill">Microsoft Certified</span> <span class="pill">20+ Years Experience</span> <span class="pill">Direct Engineer Support</span> <span class="pill">Fixed Scope Projects</span> <span class="pill">UK‑Wide Service</span> </div> <div class="footer-bottom"> <span>© 2026 CloudMonsta. All rights reserved.</span> <strong> Built on Microsoft 365.<br/> Designed, implemented and supported by CloudMonsta.<br/> <span style="font-weight:500;color:var(--muted);"> Helping small businesses work smarter with Microsoft 365. </span> </strong> </div> </div> </div>
-</footer> <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("cloudmonsta-contact-form");
-  const status = document.getElementById("form-status");
-  const submitButton = form ? form.querySelector('button[type="submit"]') : null;
+<section class="visual-break">
+<div class="container"><div class="letterbox-image">
+<img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/3383800-overview-2-800x498?fit=constrain&amp;hei=1457&amp;op_usm=1.5%2C0.65%2C15%2C0&amp;qlt=100&amp;resMode=sharp2&amp;wid=2000" alt="People collaborating with business laptops in a modern workplace">
+<div class="letterbox-caption"><span>Modern workplace</span><strong>Microsoft 365 • Secure collaboration • Practical IT</strong></div>
+</div></div></section>
+<section class="section" id="services">
+<div class="container">
+  <div class="section-title">
+    <div class="overline">CloudMonsta Services</div>
+    <h2>Build your own Microsoft 365 package.</h2>
+    <p>Choose the modules your business needs now, then add more as you grow. Every project is clearly scoped so you only pay for the work that is relevant to you.</p>
+  </div>
+  <div class="tile-grid">
+    <a class="service-tile" href="microsoft-365-foundation.html"><span class="tile-number">Module 1</span><div class="tile-icon">☁</div><h3>Microsoft 365 Foundation</h3><p>The essential starting point for a new tenant or an existing setup that needs to be configured properly.</p><ul class="tile-checks"><li>Tenant and domain setup</li><li>Users and shared mailboxes</li><li>SPF, DKIM and DMARC</li><li>MFA and secure admin setup</li></ul></a>
+    <a class="service-tile" href="email-migration.html"><span class="tile-number">Module 2</span><div class="tile-icon">↻</div><h3>Email Migration</h3><p>For businesses moving from Google Workspace, old email hosting or another Microsoft 365 tenant.</p><ul class="tile-checks"><li>Migration planning</li><li>Mailbox migration</li><li>DNS cutover</li><li>Post-migration checks</li></ul></a>
+    <a class="service-tile" href="teams-sharepoint.html"><span class="tile-number">Module 3</span><div class="tile-icon">▦</div><h3>Teams &amp; SharePoint</h3><p>A structured collaboration and document environment for your staff.</p><ul class="tile-checks"><li>Company Team setup</li><li>Department channels</li><li>Document structure</li><li>Permissions and file migration</li></ul></a>
+    <a class="service-tile" href="microsoft-365-backup.html"><span class="tile-number">Module 4</span><div class="tile-icon">◌</div><h3>Microsoft 365 Backup</h3><p>Independent protection for Microsoft 365 data with practical recovery options.</p><ul class="tile-checks"><li>Exchange backup</li><li>OneDrive backup</li><li>SharePoint and Teams protection</li><li>Retention and restore support</li></ul></a>
+    <a class="service-tile" href="ongoing-management.html"><span class="tile-number">Module 5</span><div class="tile-icon">◫</div><h3>Ongoing Management</h3><p>Monthly Microsoft 365 administration, maintenance and remote support.</p><ul class="tile-checks"><li>User and licence changes</li><li>Shared mailbox administration</li><li>Troubleshooting and maintenance</li><li>Security monitoring and reviews</li></ul></a>
+    <a class="service-tile" href="business-websites.html"><span class="tile-number">Module 6</span><div class="tile-icon">⌘</div><h3>Business Websites</h3><p>Professional, responsive websites for businesses that need credibility without unnecessary complexity.</p><ul class="tile-checks"><li>Responsive business website</li><li>Domain and SSL setup</li><li>Google Analytics and SEO foundations</li><li>Contact forms and launch support</li></ul></a>
+  </div>
+</div>
+</section>
 
-  if (!form) return;
+<section class="section" id="about">
+<div class="container">
+  <div class="section-title"><div class="overline">About CloudMonsta</div><h2>Experienced IT, delivered personally.</h2><p>CloudMonsta was created to give small businesses access to the kind of Microsoft 365 and infrastructure experience normally found in much larger IT teams.</p></div>
+  <div class="about-wrap">
+    <div class="founder-card">
+      <div class="founder-profile">
+        <div class="avatar"><img src="images/Marc.png" alt="Marc, founder of CloudMonsta"></div>
+        <div class="founder-meta"><strong>Marc</strong><span>Founder of CloudMonsta<br>IT Infrastructure Engineer</span></div>
+      </div>
+      <h2>Meet Marc, founder of CloudMonsta.</h2>
+      <p>Small businesses deserve the same level of Microsoft 365 expertise as large organisations—without the complexity or enterprise price tag.</p>
+      <p>I'm <strong>Marc Mailey</strong>, an IT Infrastructure Engineer with over <strong>20 years' experience</strong> delivering Microsoft technologies across healthcare, education, charities and commercial organisations.</p>
+      <p>CloudMonsta was created to help businesses implement Microsoft 365 properly. From migrations and security to ongoing management, every project is personally delivered by me with a focus on reliability, clear communication and long-term support.</p>
+      <div style="margin-top:24px"><a class="button secondary" href="about.html">More about CloudMonsta</a></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-point"><div class="icon">☁</div><strong>Microsoft 365</strong><p>Tenant setup, Exchange, Teams, SharePoint, OneDrive and migrations.</p></div>
+      <div class="about-point"><div class="icon">🛡</div><strong>Security minded</strong><p>MFA, email authentication, sensible hardening and secure administration.</p></div>
+      <div class="about-point"><div class="icon">🧭</div><strong>Clear guidance</strong><p>You understand what is changing, why it matters and what happens next.</p></div>
+      <div class="about-point"><div class="icon">👤</div><strong>Direct support</strong><p>You deal directly with the engineer doing the work.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="visual-break soft-break">
+<div class="container"><div class="letterbox-image alternate-crop">
+<img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/3383800-overview-2-800x498?fit=constrain&amp;hei=1457&amp;op_usm=1.5%2C0.65%2C15%2C0&amp;qlt=100&amp;resMode=sharp2&amp;wid=2000" alt="Modern business technology and cloud collaboration">
+<div class="letterbox-caption"><span>Technology that fits the business</span><strong>Clear advice. Practical delivery. Ongoing support.</strong></div>
+</div></div></section>
+<section class="section" id="journey-preview">
+<div class="container">
+  <div class="section-title"><div class="overline">How We Work</div><h2>Clear from first conversation to go-live.</h2><p>CloudMonsta projects are planned, scoped and delivered in a straightforward way so you always know what happens next.</p></div>
+  <div class="journey-grid">
+    <div class="home-journey-step"><span>01</span><strong>Discover</strong><p>Understand the business, users, systems and goals.</p></div>
+    <div class="home-journey-step"><span>02</span><strong>Design</strong><p>Agree the right Microsoft 365 structure and scope.</p></div>
+    <div class="home-journey-step"><span>03</span><strong>Prepare</strong><p>Configure, secure and plan the change carefully.</p></div>
+    <div class="home-journey-step"><span>04</span><strong>Deliver</strong><p>Migrate, implement and support users through go-live.</p></div>
+    <div class="home-journey-step"><span>05</span><strong>Support</strong><p>Document the environment and provide ongoing help if required.</p></div>
+  </div>
+  <div style="margin-top:25px"><a class="button secondary" href="project-journey.html">See the full project journey</a></div>
+</div>
+</section>
 
-  form.addEventListener("submit", async function (event) {
-    event.preventDefault();
+<section class="section" id="project">
+<div class="container">
+  <div class="section-title"><h2>Featured Case Study</h2><p>See how CloudMonsta helped Machine-Tech Ltd move from Google Workspace to Microsoft 365 and establish a more secure, manageable business platform.</p></div>
+  <div class="case-grid">
+    <div class="case-client-panel">
+      <div class="case-client-label">Featured client</div>
+      <div class="case-logo-wrap">
+        <img src="images/machine-tech-logo.png" alt="Machine-Tech Ltd" onerror="this.style.display='none';this.parentElement.innerHTML='<strong class=&quot;fallback-client-name&quot;>MACHINE-TECH</strong>'">
+      </div>
+      <div class="case-client-copy">
+        <strong>Machine-Tech Ltd</strong>
+        <span>Google Workspace → Microsoft 365</span>
+      </div>
+      <div class="case-client-points">
+        <span>✓ Email migration</span>
+        <span>✓ Microsoft 365 setup</span>
+        <span>✓ Security configuration</span>
+        <span>✓ Ongoing support</span>
+      </div>
+    </div>
+    <div class="case-copy">
+      <div class="overline">Machine-Tech Ltd</div><h2>Google Workspace to Microsoft 365</h2>
+      <p>CloudMonsta planned and delivered a complete Microsoft 365 migration for Machine-Tech Ltd, giving the business professional email, stronger security, centralised collaboration and a modern platform for future growth.</p>
+      <div class="quote">“CloudMonsta made our Microsoft 365 integration completely painless for our team. Marc delivered clear, straightforward communication throughout the setup, and their ongoing IT support keeps MachineTech running without a hitch. Reliable, professional, and jargon-free—highly recommended!”<small>— Ash Mills, Managing Director &amp; Co-Founder, MachineTech Ltd</small></div>
+      <div style="margin-top:24px"><a class="button" href="machine-tech-case-study.html">Read the case study</a></div>
+    </div>
+  </div>
+</div>
+</section>
 
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.textContent = "Sending...";
-    }
+<section class="section" id="why">
+<div class="container">
+  <div class="section-title"><h2>Why CloudMonsta?</h2><p>Professional Microsoft 365 expertise for small businesses, delivered clearly and without unnecessary complexity.</p></div>
+  <div class="why-grid">
+    <div class="why-card"><h3>Microsoft Certified</h3><p>Recognised certifications backed by hands-on delivery.</p></div>
+    <div class="why-card"><h3>20+ Years Experience</h3><p>Experience across healthcare, education, charities, managed services and small businesses.</p></div>
+    <div class="why-card"><h3>Direct Engineer Support</h3><p>You deal directly with the person doing the technical work.</p></div>
+    <div class="why-card"><h3>Clear Scope</h3><p>Projects are agreed in advance with practical recommendations and understandable outcomes.</p></div>
+  </div>
+</div>
+</section>
 
-    status.textContent = "";
+<section class="section" id="process">
+<div class="container">
+  <div class="section-title"><div class="overline">Simple Delivery</div><h2>Technology without the drama.</h2><p>The goal is a smooth implementation, clear communication and a setup your business can actually use.</p></div>
+  <div class="process-grid">
+    <div class="process-card"><span>Step 1</span><h3>Free consultation</h3><p>Talk through what you have now and what you want to improve.</p></div>
+    <div class="process-card"><span>Step 2</span><h3>Clear proposal</h3><p>Receive a defined scope, recommendations and indicative investment.</p></div>
+    <div class="process-card"><span>Step 3</span><h3>Implementation</h3><p>CloudMonsta configures and delivers the agreed solution.</p></div>
+    <div class="process-card"><span>Step 4</span><h3>Handover &amp; support</h3><p>Documentation, handover and ongoing management where required.</p></div>
+  </div>
+  <div class="advice-bar"><div><strong style="font-size:1.4rem">Not ready to talk yet?</strong><p style="margin:6px 0 0;color:var(--muted)">Browse practical Microsoft 365 guidance in the CloudMonsta Advice Centre.</p></div><a class="button secondary" href="advice.html">Visit Advice Centre</a></div>
+</div>
+</section>
 
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: new FormData(form),
-        headers: {
-          "Accept": "application/json"
-        }
-      });
+<section class="section">
+<div class="container">
+  <div class="section-title"><div class="overline">Frequently Asked Questions</div><h2>Useful answers before you get in touch.</h2></div>
+  <div class="faq">
+    <details open><summary>Can I keep my existing domain and email addresses?</summary><p>Yes. Your existing domain can normally be connected to Microsoft 365 so staff can continue using their current business email addresses.</p></details>
+    <details><summary>Can CloudMonsta migrate my existing email?</summary><p>Yes. Email migration can be scoped for Google Workspace, another Microsoft 365 tenant or traditional email hosting.</p></details>
+    <details><summary>Do I need Microsoft 365 Business Premium?</summary><p>Not necessarily. The right licence depends on your security, device-management and collaboration requirements.</p></details>
+    <details><summary>Can I see typical pricing before contacting you?</summary><p>Yes. The Typical Investment guide provides indicative pricing for common projects and ongoing services.</p></details>
+  </div>
+</div>
+</section>
 
-      if (response.ok) {
-        window.location.href = "thank-you.html";
-        return;
-      }
+<section class="section" id="contact">
+<div class="container contact-grid">
+  <div class="contact-copy">
+    <div class="section-title"><div class="overline">Get in Touch</div><h2>Tell me what you want to improve.</h2><p>Whether you're moving to Microsoft 365, fixing an existing setup, improving security or looking for ongoing support, start with a free conversation.</p></div>
+    <div class="contact-points"><span><b>✓</b> No obligation</span><span><b>✓</b> Clear recommendations</span><span><b>✓</b> Direct engineer support</span><span><b>✓</b> Norfolk-based, UK-wide service</span></div>
+    <div style="margin-top:25px"><a class="button secondary" href="typical-investment.html">View Typical Investment</a></div>
+  </div>
+  <form action="https://formspree.io/f/mrpzgkgo" method="POST">
+    <input name="name" placeholder="Your name" required>
+    <input name="email" type="email" placeholder="Email address" required>
+    <input name="business" placeholder="Business name">
+    <select name="interest"><option value="">What can CloudMonsta help with?</option><option>Microsoft 365 setup</option><option>Email migration</option><option>Teams & SharePoint</option><option>Microsoft 365 backup</option><option>Ongoing management</option><option>Business website</option><option>Other IT support</option></select>
+    <textarea name="message" placeholder="Tell me a little about what you need" required></textarea>
+    <button class="button" type="submit">Send enquiry</button>
+  </form>
+</div>
+</section>
+</main><div id="site-footer"></div>
+<script>
+async function loadPartial(id, file) {
+  const target = document.getElementById(id);
+  if (!target) return;
+  try {
+    const response = await fetch(file);
+    if (!response.ok) throw new Error(file + " could not be loaded");
+    target.innerHTML = await response.text();
+  } catch (error) {
+    console.error(error);
+  }
+}
+Promise.all([
+  loadPartial("site-header", "header.html"),
+  loadPartial("site-footer", "footer.html")
+]);
+</script>
 
-      const data = await response.json().catch(() => ({}));
-      const message = Array.isArray(data.errors)
-        ? data.errors.map(error => error.message).join(", ")
-        : "Your message could not be sent. Please try again or email hello@cloudmonsta.co.uk.";
-
-      status.textContent = message;
-      status.style.color = "#ffb3bf";
-    } catch (error) {
-      status.textContent = "Your message could not be sent. Please try again or email hello@cloudmonsta.co.uk.";
-      status.style.color = "#ffb3bf";
-    } finally {
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.textContent = "Send enquiry";
-      }
-    }
-  });
-});
-</script></body>
-</html>
+</body></html>

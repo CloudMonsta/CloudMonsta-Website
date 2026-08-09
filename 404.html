@@ -1,334 +1,56 @@
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Page Not Found | CloudMonsta</title>
-<meta content="The page you were looking for could not be found. Return to CloudMonsta or explore our Microsoft 365 services." name="description"/>
-<meta content="noindex, follow" name="robots"/>
-<meta content="#070a18" name="theme-color"/>
+<meta name="description" content="The page you were looking for could not be found. Return to CloudMonsta or explore our Microsoft 365 services.">
+<meta name="robots" content="noindex, follow"><meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://www.cloudmonsta.com/404.html"><link rel="stylesheet" href="css/cloudmonsta.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NNRHWJEC57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-NNRHWJEC57');</script>
+<style>html,body{width:100%;margin:0;padding:0;}body{display:block!important;}main{width:100%;}
+.error-page{min-height:100vh;width:100%;margin:0;background:linear-gradient(180deg,#fff,#f7faff);padding:70px 0;display:flex;justify-content:center;align-items:flex-start}.error-wrap{width:min(1080px,calc(100% - 32px));margin:0 auto;text-align:center}.error-logo{height:58px;width:auto;margin:0 auto 32px;display:block}.error-kicker{display:inline-block;color:var(--blue);font-weight:850;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}.error-code{font-size:clamp(5rem,13vw,9rem);font-weight:950;letter-spacing:-.075em;line-height:.9;color:#183b63}.error-wrap h1{font-size:clamp(2.5rem,5vw,4.4rem);margin:18px 0 0}.error-lead{max-width:700px;margin:20px auto 0;color:var(--muted);font-size:1.12rem;line-height:1.7}.error-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}.error-resources{margin-top:68px}.error-resources h2{font-size:clamp(2rem,4vw,3rem)}.error-resources>p{color:var(--muted);margin:12px 0 26px}.error-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:left}.error-card{display:flex;flex-direction:column;min-height:220px;padding:26px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:var(--shadow-sm);transition:.18s ease}.error-card:hover{transform:translateY(-3px);border-color:#aecce5}.error-card .foundation-icon{margin-bottom:18px}.error-card h3{font-size:1.3rem}.error-card p{color:var(--muted);line-height:1.6;margin:10px 0 0}.error-card strong{margin-top:auto;padding-top:20px;color:var(--blue)}.error-footer{margin-top:42px;color:var(--muted);font-size:.9rem}@media(max-width:800px){.error-grid{grid-template-columns:1fr}.error-card{min-height:auto}}@media(max-width:560px){.error-page{padding:38px 0}.error-actions{display:grid}.error-actions .button{width:100%}}
+</style>
 <style>
-    :root {
-      --bg: #070a18;
-      --text: #f7f8ff;
-      --muted: #bbc1d9;
-      --purple: #8d5cff;
-      --cyan: #26d9ff;
-      --green: #5fffb0;
-      --border: rgba(255,255,255,.14);
-      --card: rgba(255,255,255,.075);
-      --shadow: 0 24px 70px rgba(0,0,0,.35);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      min-width: 320px;
-      min-height: 100vh;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 15% 10%, rgba(141,92,255,.35), transparent 32%),
-        radial-gradient(circle at 80% 0%, rgba(38,217,255,.22), transparent 28%),
-        linear-gradient(180deg, #070a18 0%, #090c1d 44%, #050712 100%);
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .page {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 64px 0;
-    }
-
-    .panel {
-      padding: clamp(30px, 6vw, 58px);
-      border: 1px solid var(--border);
-      border-radius: 34px;
-      background:
-        radial-gradient(circle at 20% 10%, rgba(141,92,255,.30), transparent 34%),
-        radial-gradient(circle at 85% 30%, rgba(38,217,255,.20), transparent 34%),
-        rgba(255,255,255,.075);
-      box-shadow: var(--shadow);
-      text-align: center;
-    }
-
-    .logo {
-      height: 64px;
-      width: auto;
-      background: #fff;
-      padding: 10px 18px;
-      border-radius: 14px;
-      box-shadow: 0 10px 24px rgba(0,0,0,.18);
-      margin-bottom: 28px;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 9px 14px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.07);
-      border-radius: 999px;
-      color: #dfe7ff;
-      font-size: .88rem;
-      font-weight: 700;
-      margin-bottom: 22px;
-    }
-
-    .dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 18px var(--green);
-    }
-
-    h1, h2, h3 {
-      margin: 0;
-      line-height: 1.05;
-      letter-spacing: -.045em;
-    }
-
-    .error-code {
-      font-size: clamp(5rem, 15vw, 10rem);
-      font-weight: 950;
-      letter-spacing: -.08em;
-      line-height: .9;
-      background: linear-gradient(135deg, #fff, #cdd9ff 42%, #73e9ff);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      margin-top: 14px;
-    }
-
-    .lead {
-      max-width: 680px;
-      margin: 22px auto 0;
-      color: var(--muted);
-      font-size: 1.16rem;
-      line-height: 1.7;
-    }
-
-    .actions {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 22px;
-      border-radius: 999px;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--purple), var(--cyan));
-      color: #fff;
-      box-shadow: 0 18px 38px rgba(38,217,255,.2);
-    }
-
-    .button.secondary {
-      background: rgba(255,255,255,.08);
-      box-shadow: none;
-      border: 1px solid var(--border);
-    }
-
-    .resources {
-      margin-top: 54px;
-    }
-
-    .resources h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-    }
-
-    .resources-intro {
-      margin: 14px auto 28px;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .resource-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      text-align: left;
-    }
-
-    .resource-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 220px;
-      padding: 24px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      border-radius: 24px;
-      transition: transform .18s ease, border-color .18s ease, background .18s ease;
-    }
-
-    .resource-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(38,217,255,.4);
-      background: rgba(255,255,255,.09);
-    }
-
-    .resource-icon {
-      width: 54px;
-      height: 54px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 18px;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      background: linear-gradient(135deg, rgba(141,92,255,.24), rgba(38,217,255,.16));
-      font-size: 1.65rem;
-    }
-
-    .resource-card h3 {
-      font-size: 1.3rem;
-      letter-spacing: -.03em;
-    }
-
-    .resource-card p {
-      margin: 12px 0 0;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .resource-link {
-      margin-top: auto;
-      padding-top: 20px;
-      color: var(--cyan);
-      font-weight: 800;
-    }
-
-    .footer-note {
-      margin-top: 36px;
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    @media (max-width: 800px) {
-      .resource-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .resource-card {
-        min-height: auto;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .page {
-        width: min(100% - 24px, 1120px);
-        padding: 24px 0;
-      }
-
-      .panel {
-        padding: 26px 20px;
-        border-radius: 24px;
-      }
-
-      .actions {
-        display: grid;
-      }
-
-      .button {
-        width: 100%;
-      }
-    }
-  
-.logo{
- display:block;
- margin:0 auto 28px;
+.error-page,
+.error-wrap,
+.error-wrap h1,
+.error-wrap h2,
+.error-wrap .error-lead,
+.error-wrap .error-resources > p,
+.error-footer {
+  text-align: center !important;
 }
-.badge{
- margin:0 auto 22px;
+.error-kicker,
+.error-code {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
 }
-
-
-.error-code{
-  font-size:clamp(4rem,11vw,7.5rem) !important;
-  margin-bottom:8px;
-  opacity:.92;
+.error-actions {
+  width: 100% !important;
+  justify-content: center !important;
 }
-
-h1{
-  font-size:clamp(2.8rem,6vw,4.8rem) !important;
-  margin-top:6px;
-}
-
-.lead{
-  max-width:720px;
-  font-size:1.18rem;
-}
-
-.panel{
-  padding-top:48px;
-}
-
-.actions{
-  margin-top:38px;
+.error-grid {
+  text-align: left !important;
 }
 </style>
-</head>
-<body>
-<main class="page">
-<section class="panel">
-<img alt="CloudMonsta" class="logo" src="logo_.png"/>
-<div class="badge"><span class="dot"></span> Page not found</div>
-<div class="error-code">404</div>
-<h1>We couldn't find that page.</h1>
-<p class="lead">
-        The link may be out of date, the page may have moved, or the address may have been typed incorrectly.
-        You can return to the homepage or continue exploring CloudMonsta below.
-      </p>
-<div class="actions">
-<a class="button" href="index.html">Return to Home</a>
-<a class="button secondary" href="index.html#contact">Contact CloudMonsta</a>
-</div>
-<div class="resources">
-<h2>You might be looking for...</h2>
-<p class="resources-intro">Here are some of the most useful places to continue.</p>
-<div class="resource-grid">
-<a class="resource-card" href="advice.html">
-<div class="resource-icon">📚</div>
-<h3>Advice Centre</h3>
-<p>Browse practical Microsoft 365 guides, comparisons and security advice written in plain English.</p>
-<span class="resource-link">Explore the Advice Centre →</span>
-</a>
-<a class="resource-card" href="index.html#services">
-<div class="resource-icon">☁</div>
-<h3>Microsoft 365 Services</h3>
-<p>Discover CloudMonsta's Microsoft 365 setup, migration, backup and ongoing management services.</p>
-<span class="resource-link">View Services →</span>
-</a>
-<a class="resource-card" href="machine-tech-case-study.html">
-<div class="resource-icon">🏆</div>
-<h3>Featured Case Study</h3>
-<p>See how CloudMonsta migrated Machine-Tech from Google Workspace to Microsoft 365.</p>
-<span class="resource-link">Read the Case Study →</span>
-</a>
-</div>
-</div>
-<div class="footer-note">
-        © 2026 CloudMonsta · Microsoft 365 consultancy and business technology
-      </div>
-</section>
-</main>
-</body>
-</html>
+
+
+<style>
+.error-wrap h1{
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  margin:18px auto 0 !important;
+  padding:0 !important;
+  text-align:center !important;
+}
+</style>
+
+</head><body><main class="error-page"><div class="error-wrap">
+<img class="error-logo" src="images/logo_.png" alt="CloudMonsta"><div class="error-kicker">Page not found</div><div class="error-code">404</div>
+<h1>We couldn't find that page.</h1><p class="error-lead">The link may be out of date, the page may have moved, or the address may have been typed incorrectly. You can return to the homepage or continue exploring CloudMonsta below.</p>
+<div class="error-actions"><a class="button" href="index.html">Return to Home</a><a class="button secondary" href="index.html#contact">Contact CloudMonsta</a></div>
+<section class="error-resources"><h2>You might be looking for...</h2><p>Here are some useful places to continue.</p><div class="error-grid">
+<a class="error-card" href="about.html"><div class="foundation-icon">CM</div><h3>About CloudMonsta</h3><p>Meet the engineer behind CloudMonsta and find out how we help small businesses get more from Microsoft 365.</p><strong>About CloudMonsta →</strong></a>
+<a class="error-card" href="index.html#services"><div class="foundation-icon">365</div><h3>Microsoft 365 Services</h3><p>Explore Microsoft 365 setup, migration, Teams &amp; SharePoint, backup and ongoing management.</p><strong>View Services →</strong></a>
+<a class="error-card" href="machine-tech-case-study.html"><div class="foundation-icon">MT</div><h3>Featured Case Study</h3><p>See how CloudMonsta helped Machine-Tech move from Google Workspace to Microsoft 365.</p><strong>Read the Case Study →</strong></a>
+</div></section><div class="error-footer">© 2026 CloudMonsta · Microsoft 365 consultancy and business technology</div></div></main></body></html>

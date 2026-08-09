@@ -8,235 +8,76 @@
 <meta content="Microsoft 365 backup explained simply, including the apartment block analogy, shared responsibility, accidental deletion, ransomware and data recovery." name="description"/>
 <meta content="index, follow" name="robots"/>
 <meta content="CloudMonsta" name="author"/>
-<meta content="#080b1f" name="theme-color"/>
-<link href="https://www.cloudmonsta.co.uk/microsoft-365-backup-explained.html" rel="canonical"/>
+<meta content="#ffffff" name="theme-color"/>
+<link href="https://www.cloudmonsta.com/microsoft-365-backup-explained.html" rel="canonical"/>
 <meta content="article" property="og:type"/>
 <meta content="CloudMonsta" property="og:site_name"/>
 <meta content="Microsoft 365 Backup Explained" property="og:title"/>
 <meta content="Microsoft protects the service. A backup protects your business data. Here is the difference explained simply." property="og:description"/>
-<meta content="https://www.cloudmonsta.co.uk/microsoft-365-backup-explained.html" property="og:url"/>
-<meta content="https://www.cloudmonsta.co.uk/og-image.png" property="og:image"/>
+<meta content="https://www.cloudmonsta.com/microsoft-365-backup-explained.html" property="og:url"/>
+<meta content="https://www.cloudmonsta.com/images/og-image.png" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Microsoft 365 Backup Explained" name="twitter:title"/>
 <meta content="A practical, jargon-free guide to protecting Microsoft 365 business data." name="twitter:description"/>
-<meta content="https://www.cloudmonsta.co.uk/og-image.png" name="twitter:image"/>
+<meta content="https://www.cloudmonsta.com/images/og-image.png" name="twitter:image"/>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NNRHWJEC57"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-NNRHWJEC57'); </script>
+  <link rel="stylesheet" href="css/cloudmonsta.css">
+
 <style>
- :root { --bg: #070a18; --bg-soft: #10152b; --card: rgba(255, 255, 255, 0.075); --card-strong: rgba(255, 255, 255, 0.11); --text: #f7f8ff; --muted: #bbc1d9; --purple: #8d5cff; --cyan: #26d9ff; --green: #5fffb0; --border: rgba(255, 255, 255, 0.14); --shadow: 0 24px 70px rgba(0, 0, 0, 0.35); --radius: 28px; } * { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; min-width: 320px; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: radial-gradient(circle at 15% 10%, rgba(141, 92, 255, 0.35), transparent 32%), radial-gradient(circle at 80% 0%, rgba(38, 217, 255, 0.22), transparent 28%), linear-gradient(180deg, #070a18 0%, #090c1d 44%, #050712 100%); color: var(--text); line-height: 1.55; } a { color: inherit; text-decoration: none; } .container { width: min(1160px, calc(100% - 32px)); margin: 0 auto; } header { position: sticky; top: 0; z-index: 20; background: rgba(7, 10, 24, 0.78); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border); } .nav { height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; } .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; letter-spacing: -0.04em; font-size: 1.35rem; } .brand-mark { width: 44px; height: 44px; border-radius: 16px; background: linear-gradient(135deg, var(--purple), var(--cyan)); display: grid; place-items: center; box-shadow: 0 16px 40px rgba(38, 217, 255, 0.18); } .brand-mark svg { width: 27px; height: 27px; } .nav-links { display: flex; align-items: center; gap: 24px; color: var(--muted); font-size: 0.95rem; } .nav-links a:hover { color: var(--text); } .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border-radius: 999px; font-weight: 800; background: linear-gradient(135deg, var(--purple), var(--cyan)); color: #fff; box-shadow: 0 18px 38px rgba(38, 217, 255, 0.2); border: 0; cursor: pointer; transition: transform 0.18s ease, box-shadow 0.18s ease; } .button:hover { transform: translateY(-2px); box-shadow: 0 24px 48px rgba(38, 217, 255, 0.28); } .button.secondary { background: rgba(255, 255, 255, 0.08); box-shadow: none; border: 1px solid var(--border); color: var(--text); } .hero { padding: clamp(42px, 8vw, 86px) 0 clamp(34px, 6vw, 54px); } .hero-grid { display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 46px; align-items: center; } .eyebrow { display: inline-flex; align-items: center; gap: 10px; padding: 9px 14px; border: 1px solid var(--border); background: rgba(255, 255, 255, 0.07); border-radius: 999px; color: #dfe7ff; font-size: 0.88rem; font-weight: 700; margin-bottom: 22px; } .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green); box-shadow: 0 0 18px var(--green); } h1, h2, h3 { line-height: 1.05; margin: 0; letter-spacing: -0.055em; } h1 { font-size: clamp(3rem, 7vw, 6.4rem); max-width: 850px; } h1 span { background: linear-gradient(135deg, #fff, #cdd9ff 42%, #73e9ff); -webkit-background-clip: text; color: transparent; } .hero-copy { max-width: 690px; margin: 24px 0 0; color: var(--muted); font-size: clamp(1.08rem, 2vw, 1.32rem); } .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; } .trust-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; } .pill { border: 1px solid var(--border); background: rgba(255, 255, 255, 0.06); color: #dce3ff; padding: 10px 13px; border-radius: 999px; font-size: 0.92rem; font-weight: 700; } .price-card { position: relative; overflow: hidden; padding: 32px; border-radius: var(--radius); border: 1px solid var(--border); background: linear-gradient(180deg, rgba(255,255,255,0.13), rgba(255,255,255,0.06)); box-shadow: var(--shadow); } .price-card::before { content: ""; position: absolute; width: 240px; height: 240px; right: -80px; top: -80px; border-radius: 50%; background: radial-gradient(circle, rgba(38,217,255,0.32), transparent 68%); } .price-card > * { position: relative; } .launch { color: var(--cyan); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 900; font-size: 0.78rem; } .price-card h2 { font-size: 2rem; margin-top: 12px; } .price { font-size: 4.8rem; font-weight: 950; letter-spacing: -0.08em; margin: 20px 0 2px; } .price small { font-size: 1rem; color: var(--muted); letter-spacing: 0; font-weight: 700; } .checklist { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 14px; } .checklist li { display: grid; grid-template-columns: 26px 1fr; gap: 10px; color: #e8ecff; } .tick { width: 24px; height: 24px; border-radius: 50%; background: rgba(95, 255, 176, 0.16); color: var(--green); display: grid; place-items: center; font-weight: 900; } .section { padding: clamp(52px, 8vw, 76px) 0; } .section-title { max-width: 820px; margin-bottom: 36px; } .section-title h2 { font-size: clamp(2.2rem, 4vw, 4rem); } .section-title p { margin: 18px 0 0; color: var(--muted); font-size: 1.14rem; } .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; } .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; } .card { padding: 26px; border: 1px solid var(--border); background: var(--card); border-radius: 24px; min-height: 100%; } .card strong { color: var(--text); font-size: 1.1rem; } .card p { color: var(--muted); margin: 10px 0 0; } .icon { width: 54px; height: 54px; border-radius: 18px; display: grid; place-items: center; margin-bottom: 18px; background: linear-gradient(135deg, rgba(141,92,255,0.24), rgba(38,217,255,0.16)); border: 1px solid var(--border); color: var(--cyan); } .icon svg { width: 29px; height: 29px; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; } .proof { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 26px; align-items: stretch; } .founder { background: linear-gradient(180deg, rgba(141,92,255,0.2), rgba(255,255,255,0.06)); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px; } .founder-profile { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; } .avatar { width: 108px; height: 108px; flex: 0 0 108px; border-radius: 50%; background: linear-gradient(rgba(7,10,24,0.2), rgba(7,10,24,0.2)), linear-gradient(135deg, var(--purple), var(--cyan)); border: 3px solid rgba(255,255,255,0.24); display: grid; place-items: center; overflow: hidden; box-shadow: 0 18px 42px rgba(38, 217, 255, 0.18); color: rgba(255,255,255,0.9); font-weight: 900; text-align: center; font-size: 0.8rem; line-height: 1.2; padding: 16px; } .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transform: scale(1.5); display: block;
-} .founder-meta strong { display: block; font-size: 1.35rem; letter-spacing: -0.03em; } .founder-meta span { display: block; color: var(--cyan); font-weight: 800; margin-top: 3px; } .founder h2 { font-size: 2.3rem; } .founder p { color: var(--muted); } .process { counter-reset: step; display: grid; gap: 16px; } .step { counter-increment: step; display: grid; grid-template-columns: 52px 1fr; gap: 16px; align-items: start; padding: 24px; border: 1px solid var(--border); background: var(--card); border-radius: 24px; } .step::before { content: counter(step); width: 52px; height: 52px; border-radius: 18px; background: rgba(38, 217, 255, 0.12); color: var(--cyan); display: grid; place-items: center; font-weight: 950; font-size: 1.2rem; } .step h3 { font-size: 1.35rem; } .step p { color: var(--muted); margin: 8px 0 0; } .faq { display: grid; gap: 12px; } details { border: 1px solid var(--border); background: rgba(255, 255, 255, 0.06); border-radius: 20px; padding: 20px 22px; } summary { cursor: pointer; font-weight: 850; font-size: 1.05rem; } details p { color: var(--muted); margin: 14px 0 0; } .cta-panel { border: 1px solid var(--border); background: radial-gradient(circle at 20% 10%, rgba(141, 92, 255, 0.32), transparent 34%), radial-gradient(circle at 85% 30%, rgba(38, 217, 255, 0.22), transparent 34%), rgba(255,255,255,0.075); border-radius: 34px; padding: clamp(30px, 6vw, 58px); display: grid; grid-template-columns: 1fr 0.85fr; gap: 28px; align-items: center; box-shadow: var(--shadow); } .cta-panel h2 { font-size: clamp(2.2rem, 4.6vw, 4.4rem); } .cta-panel p { color: var(--muted); font-size: 1.13rem; } form { display: grid; gap: 12px; background: rgba(0, 0, 0, 0.16); border: 1px solid var(--border); border-radius: 24px; padding: 22px; } input, textarea, select { width: 100%; border: 1px solid var(--border); background: rgba(255, 255, 255, 0.08); color: var(--text); border-radius: 14px; padding: 14px 15px; font: inherit; outline: none; } select { appearance: none; -webkit-appearance: none; -moz-appearance: none;
-} select option { background: #10152b; color: #ffffff;
-} textarea { min-height: 110px; resize: vertical; } input::placeholder, textarea::placeholder { color: #8f96b5; } footer { padding: 34px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.95rem; } .footer-row { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; } @media (max-width: 900px) { .nav-links { display: none; } .hero-grid, .proof, .cta-panel, .grid-2, .grid-3 { grid-template-columns: 1fr; } .hero { padding-top: 46px; } .price { font-size: 4rem; } .price-card { order: -1; } .cta-panel { gap: 22px; } } @media (max-width: 560px) { .container { width: min(100% - 24px, 1160px); } .nav { height: auto; min-height: 68px; padding: 12px 0; } .brand { font-size: 1.08rem; } .brand-mark { width: 40px; height: 40px; border-radius: 14px; } .nav .button { display: none; } .button { width: 100%; min-height: 52px; } .hero-actions .button { width: 100%; } .trust-row { gap: 9px; } .pill { font-size: 0.82rem; padding: 8px 11px; } .price-card, .card, .founder, form { padding: 20px; border-radius: 22px; } .cta-panel { border-radius: 24px; padding: 22px; } h1 { font-size: clamp(2.45rem, 13vw, 3.15rem); letter-spacing: -0.065em; } .hero-copy, .section-title p, .cta-panel p { font-size: 1rem; } .section-title { margin-bottom: 24px; } .section-title h2, .cta-panel h2 { font-size: clamp(2rem, 10vw, 2.7rem); } .price { font-size: clamp(3.2rem, 17vw, 4rem); } .founder-profile { align-items: flex-start; gap: 14px; } .avatar { width: 88px; height: 88px; flex-basis: 88px; } .founder-meta strong { font-size: 1.12rem; } .founder-meta span { font-size: 0.9rem; } .step { grid-template-columns: 44px 1fr; padding: 18px; } .step::before { width: 44px; height: 44px; border-radius: 15px; } input, textarea, select { font-size: 16px; } } @media (max-width: 390px) { .brand { font-size: 1rem; } .founder-profile { flex-direction: column; } .avatar { width: 96px; height: 96px; } } .site-footer { margin-top: 34px; border-top: 1px solid var(--border); background: radial-gradient(circle at 15% 0%, rgba(141,92,255,0.16), transparent 28%), radial-gradient(circle at 85% 10%, rgba(38,217,255,0.12), transparent 30%), rgba(4, 6, 16, 0.92); } .footer-cta { padding: clamp(42px, 7vw, 72px) 0; text-align: center; border-bottom: 1px solid var(--border); } .footer-cta h2 { font-size: clamp(2.2rem, 4.6vw, 4.4rem); max-width: 850px; margin: 0 auto; } .footer-cta p { color: var(--muted); max-width: 720px; margin: 18px auto 28px; font-size: 1.12rem; } .footer-main { padding: 54px 0 34px; } .footer-grid { display: grid; grid-template-columns: 1.3fr repeat(3, 0.8fr); gap: 34px; align-items: start; } .footer-brand img { height: 58px; width: auto; display: block; background: #fff; padding: 8px 14px; border-radius: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); margin-bottom: 18px; } .footer-brand p { color: var(--muted); max-width: 360px; margin: 0; } .footer-column h3 { font-size: 1rem; letter-spacing: 0; margin-bottom: 14px; } .footer-links { display: grid; gap: 10px; } .footer-links a { color: var(--muted); font-size: 0.95rem; } .footer-links a:hover { color: var(--text); } .footer-contact { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; padding-top: 28px; border-top: 1px solid var(--border); } .contact-chip { border: 1px solid var(--border); background: rgba(255,255,255,0.055); border-radius: 999px; padding: 10px 14px; color: #dfe7ff; font-size: 0.9rem; font-weight: 700; } .footer-trust { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; } .footer-bottom { margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; color: var(--muted); font-size: 0.9rem; } .footer-bottom strong { color: var(--text); } @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } } @media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; } .footer-cta .button { width: 100%; } .footer-contact, .footer-trust { display: grid; } .contact-chip, .footer-trust .pill { width: 100%; text-align: center; } } .footer-grid{ display:grid; grid-template-columns:repeat(3,minmax(220px,280px)); justify-content:center; text-align:center; gap:48px;
-}
-.footer-brand{ text-align:center; max-width:700px; margin:0 auto 48px;
-}
-.footer-brand img{ margin:0 auto 18px;
-}
-.footer-links{ justify-items:center;
-}
-.footer-column h3{ text-align:center;
-}
-.footer-contact,
-.footer-trust,
-.footer-bottom{ justify-content:center !important; text-align:center;
-}
-.footer-bottom{ flex-direction:column; align-items:center;
-}
-@media(max-width:900px){ .footer-grid{ grid-template-columns:1fr; }
-} 
-.service-card{
-display:block;
-text-decoration:none;
-color:inherit;
-transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease;
-}
-.service-card:hover{
-transform:translateY(-6px);
-border-color:rgba(38,217,255,.45)!important;
-box-shadow:0 22px 50px rgba(38,217,255,.12);
-background:rgba(255,255,255,.09);
-}
-.service-card strong{transition:color .2s ease;}
-.service-card:hover strong{color:var(--cyan);}
-
-
-.article-hero{
-  padding:clamp(60px,9vw,110px) 0 50px;
-}
-.article-hero-inner{
-  max-width:900px;
-}
-.article-meta{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
+.comparison-table-wrap{
+  overflow-x:auto;
   margin-top:24px;
 }
-.article-shell{
-  display:grid;
-  grid-template-columns:minmax(0,1fr) 280px;
-  gap:34px;
-  align-items:start;
+.comparison-table{
+  width:100%;
+  min-width:640px;
+  border-collapse:collapse;
+  background:#fff;
 }
-.article-content{
-  display:grid;
-  gap:28px;
+.comparison-table th,
+.comparison-table td{
+  padding:14px;
+  text-align:left;
+  border-bottom:1px solid var(--line);
 }
-.article-card{
-  padding:clamp(24px,4vw,38px);
-  border:1px solid var(--border);
-  border-radius:28px;
-  background:var(--card);
+.comparison-table th{
+  background:#f8fbff;
+  color:var(--ink);
 }
-.article-card h2{
-  font-size:clamp(2rem,3.8vw,3.2rem);
-  margin-bottom:18px;
-}
-.article-card p{
+.comparison-table td{
   color:var(--muted);
-  font-size:1.08rem;
-  margin:0 0 18px;
 }
-.article-card p:last-child{
-  margin-bottom:0;
+.comparison-table tr:last-child td{
+  border-bottom:0;
 }
-.article-card ul{
-  margin:20px 0 0;
-  padding:0;
-  list-style:none;
+.backup-risk-mini-grid{
   display:grid;
-  gap:12px;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:24px;
 }
-.article-card li{
-  display:grid;
-  grid-template-columns:26px 1fr;
-  gap:10px;
-  color:#e8ecff;
-}
-.article-number{
-  display:inline-grid;
-  place-items:center;
-  width:54px;
-  height:54px;
-  border-radius:18px;
-  margin-bottom:18px;
-  background:linear-gradient(135deg,rgba(141,92,255,.26),rgba(38,217,255,.18));
-  border:1px solid var(--border);
-  color:var(--cyan);
-  font-weight:950;
-  font-size:1.15rem;
-}
-.example-box{
-  margin:22px 0;
+.backup-risk-mini-card{
   padding:20px;
-  border-radius:20px;
-  border:1px solid var(--border);
-  background:rgba(0,0,0,.14);
-  text-align:center;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#f9fbfd;
 }
-.example-box strong{
-  color:var(--cyan);
-  font-size:1.15rem;
-}
-.sidebar{
-  position:sticky;
-  top:100px;
-  display:grid;
-  gap:18px;
-}
-.sidebar-card{
-  padding:22px;
-  border:1px solid var(--border);
-  border-radius:22px;
-  background:rgba(255,255,255,.06);
-}
-.sidebar-card h3{
-  font-size:1.2rem;
-  margin-bottom:14px;
-}
-.sidebar-links{
-  display:grid;
-  gap:10px;
-}
-.sidebar-links a{
-  color:var(--muted);
-  font-size:.95rem;
-}
-.sidebar-links a:hover{
-  color:var(--text);
-}
-.summary-panel{
-  border:1px solid var(--border);
-  border-radius:34px;
-  padding:clamp(30px,6vw,58px);
-  background:
-    radial-gradient(circle at 20% 10%,rgba(141,92,255,.3),transparent 34%),
-    radial-gradient(circle at 85% 30%,rgba(38,217,255,.2),transparent 34%),
-    rgba(255,255,255,.075);
-  box-shadow:var(--shadow);
-}
-.summary-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-  margin-top:28px;
-}
-.summary-item{
-  padding:20px;
-  border:1px solid var(--border);
-  border-radius:20px;
-  background:rgba(0,0,0,.12);
-}
-.summary-item strong{
+.backup-risk-mini-card strong{
   display:block;
-  margin-bottom:8px;
+  color:var(--ink);
+  margin-bottom:7px;
 }
-.related-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-}
-.related-card{
-  padding:24px;
-  border:1px solid var(--border);
-  border-radius:22px;
-  background:var(--card);
-}
-.related-card span{
-  display:block;
-  color:var(--cyan);
-  font-size:.8rem;
-  text-transform:uppercase;
-  letter-spacing:.1em;
-  font-weight:900;
-  margin-bottom:10px;
-}
-.related-card h3{
-  font-size:1.35rem;
-  margin-bottom:10px;
-}
-.related-card p{
-  color:var(--muted);
+.backup-risk-mini-card p{
   margin:0;
 }
-@media(max-width:900px){
-  .article-shell{
-    grid-template-columns:1fr;
-  }
-  .sidebar{
-    position:static;
-    order:-1;
-  }
-  .summary-grid,
-  .related-grid{
-    grid-template-columns:1fr;
-  }
+@media(max-width:620px){
+  .backup-risk-mini-grid{grid-template-columns:1fr}
 }
-
 </style>
+
 </head>
 <body id="top">
-<header> <div class="container nav"> <a aria-label="CloudMonsta home" class="brand" href="index.html"> <img alt="CloudMonsta" src="logo_.png" style=" height: 58px; width: auto; display: block; background: #ffffff; padding: 8px 14px; border-radius: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); "/>
-</a> <nav aria-label="Primary navigation" class="nav-links"> <a href="index.html#services">Services</a> <a href="index.html#journey-preview">How We Work</a> <a href="index.html#project">Case Study</a> <a href="index.html#why">Why CloudMonsta</a> <a href="index.html#process">How it works</a> </nav> <a class="button" href="index.html#contact">Book free call</a> </div> </header>
+<div id="site-header"></div>
 <main>
 <section class="article-hero">
 <div class="container">
@@ -253,7 +94,7 @@ background:rgba(255,255,255,.09);
 </div>
 </div>
 </section>
-<section class="section" style="padding-top:20px;">
+<section class="section" >
 <div class="container article-shell">
 <article class="article-content">
 <section class="article-card" id="misunderstanding">
@@ -263,7 +104,7 @@ background:rgba(255,255,255,.09);
 <p>Microsoft 365 is extremely resilient, but keeping the platform available is not the same as keeping a separate, independent copy of your business data.</p>
 <div class="example-box">
 <strong>Microsoft keeps the service running.</strong><br/>
-<span style="color:var(--muted);">A backup helps you recover your data when something goes wrong.</span>
+<span >A backup helps you recover your data when something goes wrong.</span>
 </div>
 </section>
 <section class="article-card" id="flat-analogy">
@@ -277,7 +118,7 @@ background:rgba(255,255,255,.09);
 <li><span class="tick">✓</span><span>The building infrastructure is maintained</span></li>
 <li><span class="tick">✓</span><span>Major faults are repaired</span></li>
 </ul>
-<p style="margin-top:20px;">That is similar to Microsoft’s responsibility for the Microsoft 365 platform.</p>
+<p >That is similar to Microsoft’s responsibility for the Microsoft 365 platform.</p>
 </section>
 <section class="article-card" id="your-belongings">
 <div class="article-number">2</div>
@@ -289,7 +130,7 @@ background:rgba(255,255,255,.09);
 <li><span class="tick">✓</span><span>Important paperwork</span></li>
 <li><span class="tick">✓</span><span>Your passport and personal records</span></li>
 </ul>
-<p style="margin-top:20px;">If you accidentally throw away an important document, someone steals your laptop or your belongings are damaged, the building owner does not automatically replace them.</p>
+<p >If you accidentally throw away an important document, someone steals your laptop or your belongings are damaged, the building owner does not automatically replace them.</p>
 <p>The building is their responsibility. The contents of your flat are yours.</p>
 </section>
 <section class="article-card" id="shared-responsibility">
@@ -297,19 +138,19 @@ background:rgba(255,255,255,.09);
 <h2>Microsoft 365 Works in a Similar Way</h2>
 <p>Microsoft is responsible for operating and protecting the service infrastructure.</p>
 <p>Your organisation remains responsible for how its data is created, deleted, retained, shared and recovered.</p>
-<div style="overflow-x:auto;margin-top:24px;">
-<table style="width:100%;border-collapse:collapse;min-width:640px;">
+<div class="comparison-table-wrap">
+<table class="comparison-table">
 <thead>
 <tr>
-<th style="text-align:left;padding:14px;border-bottom:1px solid var(--border);">Microsoft helps maintain</th>
-<th style="text-align:left;padding:14px;border-bottom:1px solid var(--border);">A backup helps protect</th>
+<th>Microsoft helps maintain</th>
+<th>A backup helps protect</th>
 </tr>
 </thead>
 <tbody>
-<tr><td style="padding:14px;border-bottom:1px solid var(--border);color:var(--muted);">Exchange Online availability</td><td style="padding:14px;border-bottom:1px solid var(--border);color:var(--muted);">Your emails and mailbox data</td></tr>
-<tr><td style="padding:14px;border-bottom:1px solid var(--border);color:var(--muted);">OneDrive infrastructure</td><td style="padding:14px;border-bottom:1px solid var(--border);color:var(--muted);">Your documents and folders</td></tr>
-<tr><td style="padding:14px;border-bottom:1px solid var(--border);color:var(--muted);">SharePoint service availability</td><td style="padding:14px;border-bottom:1px solid var(--border);color:var(--muted);">Your sites, libraries and files</td></tr>
-<tr><td style="padding:14px;color:var(--muted);">The Microsoft 365 platform</td><td style="padding:14px;color:var(--muted);">An independent recovery copy of business data</td></tr>
+<tr><td>Exchange Online availability</td><td>Your emails and mailbox data</td></tr>
+<tr><td>OneDrive infrastructure</td><td>Your documents and folders</td></tr>
+<tr><td>SharePoint service availability</td><td>Your sites, libraries and files</td></tr>
+<tr><td>The Microsoft 365 platform</td><td>An independent recovery copy of business data</td></tr>
 </tbody>
 </table>
 </div>
@@ -318,13 +159,13 @@ background:rgba(255,255,255,.09);
 <div class="article-number">4</div>
 <h2>What Can Actually Go Wrong?</h2>
 <p>Most data-loss incidents are not caused by Microsoft’s data centres failing. They are caused by everyday business events.</p>
-<div class="grid-2" style="margin-top:24px;">
-<div class="card"><strong>Accidental deletion</strong><p>A user removes an important folder and nobody notices until much later.</p></div>
-<div class="card"><strong>A leaver’s account</strong><p>An employee leaves, their account is removed, and old data is needed months afterwards.</p></div>
-<div class="card"><strong>Ransomware or corruption</strong><p>Damaged or encrypted files synchronise into cloud storage.</p></div>
-<div class="card"><strong>A business dispute</strong><p>You need an old email, quotation or document that is no longer available.</p></div>
-<div class="card"><strong>Permissions or admin mistakes</strong><p>A site, library or mailbox is changed or removed incorrectly.</p></div>
-<div class="card"><strong>Intentional deletion</strong><p>A disgruntled or careless user removes information before leaving.</p></div>
+<div class="backup-risk-mini-grid">
+<div class="backup-risk-mini-card"><strong>Accidental deletion</strong><p>A user removes an important folder and nobody notices until much later.</p></div>
+<div class="backup-risk-mini-card"><strong>A leaver’s account</strong><p>An employee leaves, their account is removed, and old data is needed months afterwards.</p></div>
+<div class="backup-risk-mini-card"><strong>Ransomware or corruption</strong><p>Damaged or encrypted files synchronise into cloud storage.</p></div>
+<div class="backup-risk-mini-card"><strong>A business dispute</strong><p>You need an old email, quotation or document that is no longer available.</p></div>
+<div class="backup-risk-mini-card"><strong>Permissions or admin mistakes</strong><p>A site, library or mailbox is changed or removed incorrectly.</p></div>
+<div class="backup-risk-mini-card"><strong>Intentional deletion</strong><p>A disgruntled or careless user removes information before leaving.</p></div>
 </div>
 </section>
 <section class="article-card" id="retention-is-not-backup">
@@ -344,7 +185,7 @@ background:rgba(255,255,255,.09);
 <li><span class="tick">✓</span><span>SharePoint sites and document libraries</span></li>
 <li><span class="tick">✓</span><span>Teams-connected files stored in SharePoint</span></li>
 </ul>
-<p style="margin-top:20px;">The exact protection, retention and recovery options depend on the backup product and how it has been configured.</p>
+<p >The exact protection, retention and recovery options depend on the backup product and how it has been configured.</p>
 </section>
 <section class="article-card" id="independent-copy">
 <div class="article-number">7</div>
@@ -369,7 +210,7 @@ background:rgba(255,255,255,.09);
 <li><span class="tick">✓</span><span>Would missing data stop staff from working?</span></li>
 <li><span class="tick">✓</span><span>Would you need information from a former employee’s account?</span></li>
 </ul>
-<p style="margin-top:20px;">If the answer to any of these is yes, backup is worth serious consideration.</p>
+<p >If the answer to any of these is yes, backup is worth serious consideration.</p>
 </section>
 <section class="article-card" id="cost">
 <div class="article-number">10</div>
@@ -407,8 +248,8 @@ background:rgba(255,255,255,.09);
 </div>
 <div class="sidebar-card">
 <h3>Need help protecting your data?</h3>
-<p style="color:var(--muted);margin:0 0 18px;">CloudMonsta can review your Microsoft 365 data, explain the options and provide a clear backup estimate.</p>
-<a class="button" href="index.html#contact" style="width:100%;">Book a free call</a>
+<p class="sidebar-help-copy">CloudMonsta can review your Microsoft 365 data, explain the options and provide a clear backup estimate.</p>
+<a class="button" href="index.html#contact" >Book a free call</a>
 </div>
 </aside>
 </div>
@@ -417,19 +258,19 @@ background:rgba(255,255,255,.09);
 <div class="container">
 <div class="summary-panel">
 <div class="eyebrow"><span class="dot"></span> Service protection is not data protection</div>
-<h2 style="font-size:clamp(2.2rem,4.5vw,4rem);">Microsoft runs the platform. Your business owns the data.</h2>
-<p style="color:var(--muted);font-size:1.12rem;max-width:820px;">A backup gives you a separate recovery route when important emails, files or sites are deleted, damaged or needed after the original account has gone.</p>
+<h2 >Microsoft runs the platform. Your business owns the data.</h2>
+<p class="summary-copy">A backup gives you a separate recovery route when important emails, files or sites are deleted, damaged or needed after the original account has gone.</p>
 <div class="summary-grid">
-<div class="summary-item"><strong>Microsoft 365</strong><span style="color:var(--muted);">Keeps the cloud platform resilient and available.</span></div>
-<div class="summary-item"><strong>Your business</strong><span style="color:var(--muted);">Controls users, data, deletion, sharing and retention.</span></div>
-<div class="summary-item"><strong>Backup</strong><span style="color:var(--muted);">Provides an independent copy for recovery.</span></div>
+<div class="summary-item"><strong>Microsoft 365</strong><span >Keeps the cloud platform resilient and available.</span></div>
+<div class="summary-item"><strong>Your business</strong><span >Controls users, data, deletion, sharing and retention.</span></div>
+<div class="summary-item"><strong>Backup</strong><span >Provides an independent copy for recovery.</span></div>
 </div>
 </div>
 </div>
 </section>
 <section class="section"><div class="container"><div class="section-title"><h2>Continue reading</h2><p>More practical, jargon-free advice for small businesses using Microsoft 365.</p></div><div class="related-grid"><a class="related-card" href="5-reasons-small-business-microsoft-365.html"><span>Read now</span><h3>5 Reasons Every Small Business Should Use Microsoft 365</h3><p>Professional email, flexible working, stronger security, organised files and room to grow.</p></a><a class="related-card" href="google-workspace-vs-microsoft-365.html"><span>Read now</span><h3>Google Workspace vs Microsoft 365</h3><p>A practical comparison for small businesses deciding which platform is the better fit.</p></a><a class="related-card" href="spf-dkim-dmarc-explained-simply.html"><span>Read now</span><h3>SPF, DKIM &amp; DMARC Explained Simply</h3><p>How three important email-security technologies work together to reduce spoofing and fraud.</p></a><a class="related-card" href="why-professional-business-email-matters.html"><span>Read now</span><h3>Why Professional Business Email Matters More Than You Think</h3><p>How your email address affects trust, deliverability, security and the way customers see your business.</p></a><a class="related-card" href="choosing-the-right-microsoft-365-licence.html"><span>Coming soon</span><h3>Choosing the Right Microsoft 365 Licence</h3><p>Understanding Business Basic, Business Standard and Business Premium without the jargon.</p></a><a class="related-card" href="10-signs-your-business-has-outgrown-gmail.html"><span>Coming soon</span><h3>10 Signs Your Business Has Outgrown Gmail</h3><p>The warning signs that free or personal email is starting to hold your business back.</p></a></div></div></section><section class="section">
 <div class="container">
-<div class="cta-panel">
+<div class="article-cta">
 <div>
 <h2>Would losing Microsoft 365 data cause a problem for your business?</h2>
 <p>CloudMonsta can review your current data, explain the available backup options and provide a clear estimate with no obligation.</p>
@@ -439,15 +280,26 @@ background:rgba(255,255,255,.09);
 <span class="pill">Restore support</span>
 </div>
 </div>
-<div style="text-align:center;">
+<div class="article-cta-action">
 <a class="button" href="index.html#contact">Discuss Microsoft 365 Backup</a>
 </div>
 </div>
 </div>
 </section>
 </main>
-<footer class="site-footer">
-<div class="footer-main"> <div class="container"> <div style="text-align:center;margin-bottom:42px"> <img alt="CloudMonsta" src="logo_.png" style="height:64px;background:#fff;padding:10px 18px;border-radius:14px;box-shadow:0 10px 24px rgba(0,0,0,.18)"/> <p style="max-width:620px;margin:22px auto;color:var(--muted)"> Helping small businesses get more from Microsoft 365 through professional consultancy, migration, security and ongoing support. </p> </div> <div class="footer-grid"> <div class="footer-column"> <h3>Core Services</h3> <div class="footer-links"> <a href="index.html#services">Microsoft 365 Foundation</a> <a href="index.html#services">Email Migration</a> <a href="index.html#services">Teams &amp; SharePoint</a> <a href="index.html#services">Backup</a> <a href="index.html#services">Ongoing Management</a> <a href="business-websites.html">Business Websites</a> </div> </div> <div class="footer-column"> <h3>Explore</h3> <div class="footer-links"> <a href="index.html#journey-preview">How We Work</a> <a href="project-journey.html">From First Call to Go Live</a> <a href="index.html#project">Machine‑Tech Case Study</a> <a href="typical-investment.html">Typical Investment</a> </div> </div> <div class="footer-column"> <h3>Get in Touch</h3> <div class="footer-links"> <a href="mailto:hello@cloudmonsta.co.uk">hello@cloudmonsta.co.uk</a> <a href="https://www.cloudmonsta.co.uk">cloudmonsta.co.uk</a> <span style="color:var(--muted)">Norfolk • Supporting businesses across the UK</span> </div> </div> </div> <div style="margin:40px 0;border-top:1px solid var(--border)"></div> <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap"> <span class="pill">Microsoft Certified</span> <span class="pill">20+ Years Experience</span> <span class="pill">Direct Engineer Support</span> <span class="pill">Fixed Scope Projects</span> <span class="pill">UK‑Wide Service</span> </div> <div class="footer-bottom"> <span>© 2026 CloudMonsta. All rights reserved.</span> <strong> Built on Microsoft 365.<br/> Designed, implemented and supported by CloudMonsta.<br/> <span style="font-weight:500;color:var(--muted);"> Helping small businesses work smarter with Microsoft 365. </span> </strong> </div> </div> </div>
-</footer>
+<div id="site-footer"></div>
+<script>
+async function loadPartial(id,file){
+  const target=document.getElementById(id);
+  if(!target)return;
+  const response=await fetch(file);
+  if(response.ok)target.innerHTML=await response.text();
+}
+Promise.all([
+  loadPartial("site-header","header.html"),
+  loadPartial("site-footer","footer.html")
+]);
+</script>
+
 </body>
 </html>
