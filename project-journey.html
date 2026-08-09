@@ -221,17 +221,6 @@ gtag('config','G-NNRHWJEC57');
 </main>
 
 <div id="site-footer"></div>
-<script>
-async function loadPartial(id,file){
-  const target=document.getElementById(id);
-  if(!target)return;
-  const response=await fetch(file);
-  if(response.ok)target.innerHTML=await response.text();
-}
-Promise.all([
-  loadPartial("site-header","header.html"),
-  loadPartial("site-footer","footer.html")
-]);
-</script>
+<script src="js/site.js"></script>
 </body>
 </html>
