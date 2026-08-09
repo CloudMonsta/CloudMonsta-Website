@@ -135,7 +135,7 @@
   <div class="about-wrap">
     <div class="founder-card">
       <div class="founder-profile">
-        <div class="avatar"><img src="images/Marc.png" alt="Marc, founder of CloudMonsta"></div>
+        <div class="avatar"><img src="images/Marc.webp" alt="Marc, founder of CloudMonsta" width="400" height="400"></div>
         <div class="founder-meta"><strong>Marc</strong><span>Founder of CloudMonsta<br>IT Infrastructure Engineer</span></div>
       </div>
       <h2>Meet Marc, founder of CloudMonsta.</h2>
@@ -179,7 +179,7 @@
     <div class="case-client-panel">
       <div class="case-client-label">Featured client</div>
       <div class="case-logo-wrap">
-        <img src="images/Machine-Tech-logo.png" alt="Machine-Tech Ltd" onerror="this.style.display='none';this.parentElement.innerHTML='<strong class=&quot;fallback-client-name&quot;>MACHINE-TECH</strong>'">
+        <img src="images/Machine-Tech-logo.png" alt="Machine-Tech Ltd" width="420" height="140" onerror="this.style.display='none';this.parentElement.innerHTML='<strong class=&quot;fallback-client-name&quot;>MACHINE-TECH</strong>'">
       </div>
       <div class="case-client-copy">
         <strong>Machine-Tech Ltd</strong>
@@ -250,7 +250,7 @@
     <input name="name" placeholder="Your name" required>
     <input name="email" type="email" placeholder="Email address" required>
     <input name="business" placeholder="Business name">
-    <select name="interest"><option value="">What can CloudMonsta help with?</option><option>Microsoft 365 setup</option><option>Email migration</option><option>Teams & SharePoint</option><option>Microsoft 365 backup</option><option>Ongoing management</option><option>Business website</option><option>Other IT support</option></select>
+    <label for="interest" class="sr-only">What can CloudMonsta help with?</label><select name="interest" id="interest" aria-label="What can CloudMonsta help with?"><option value="">What can CloudMonsta help with?</option><option>Microsoft 365 setup</option><option>Email migration</option><option>Teams & SharePoint</option><option>Microsoft 365 backup</option><option>Ongoing management</option><option>Business website</option><option>Other IT support</option></select>
     <textarea name="message" placeholder="Tell me a little about what you need" required></textarea>
     <button class="button" type="submit">Send enquiry</button>
   </form>
