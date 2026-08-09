@@ -2195,29 +2195,44 @@ summary{cursor:pointer;font-weight:800}details p{color:var(--muted);margin:13px 
 @media(max-width:620px){.article-hero{padding-top:46px}.article-card,.summary-panel,.related-card,.article-cta{padding:21px}}
 
 /* =========================================================
-   MOBILE NAVIGATION
+   HOMEPAGE FEATURED CASE STUDY — MOBILE FIX
    ========================================================= */
 @media (max-width: 960px) {
-  .nav {
-    position: relative;
+  #project .case-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .nav-links.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 76px;
-    left: 0;
-    right: 0;
-    background: #fff;
-    border-top: 1px solid var(--line);
-    box-shadow: var(--shadow-sm);
-    padding: 12px 0;
-    z-index: 1000;
+  #project .case-client-panel,
+  #project .case-copy {
+    min-width: 0;
+    width: 100%;
   }
 
-  .nav-links.open a {
-    padding: 14px 24px;
-    border-bottom: 0;
+  #project .case-copy {
+    padding: 30px 24px;
+  }
+}
+
+@media (max-width: 620px) {
+  #project .case-client-panel {
+    padding: 26px 20px;
+  }
+
+  #project .case-logo-wrap {
+    width: min(250px, 100%);
+  }
+
+  #project .case-copy {
+    padding: 24px 20px;
+  }
+
+  #project .case-copy h2 {
+    font-size: clamp(2rem, 11vw, 2.8rem);
+    overflow-wrap: anywhere;
+  }
+
+  #project .quote {
+    padding: 18px;
+    font-size: 1rem;
   }
 }
